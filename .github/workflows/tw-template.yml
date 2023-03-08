@@ -18,6 +18,6 @@ jobs:
       uses: peter-evans/repository-dispatch@v2
       with:
         token: ${{ secrets.TW_PAT }}
-        repository: trustedweb-dev/tw-template
+        repository: ${{ vars.TW_TEMPLATE_REPOSITORY }}
         event-type: update-microcms
         client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
