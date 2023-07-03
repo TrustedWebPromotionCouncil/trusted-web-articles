@@ -1,0 +1,122 @@
+<p>
+  2022年度「Trusted Web
+  の実現に向けたユースケース実証事業」において実証を行ったユースケースのうち、国立大学法人東京大学の行った「学修歴等の本人管理による人材流動の促進」の内容をご紹介します。
+  <br />
+  <br />
+  ページ下部の各資料リンクから、より詳細な実証内容についてご覧いただけます。
+  <br />
+</p>
+<h2 id="hb031d3968a">
+  <strong><u>背景と目的</u></strong>
+</h2>
+<p>
+  　東京大学では、国内・国外にわたる入進学、留学、就職等に係る手続きの精度と効率と利便性を高めるため、学修歴(マイクロクレデンシャルおよびマクロクレデンシャル)の電子証明の必要性を認識し、全
+  学 DX
+  の一環として、大学の構成員(学生、教職員など)および他の関係者(卒業生や名誉教授)を認
+  証する仕組み等とともに検討してきた。マイクロクレデンシャルは個々の科目の履修等に関する証明、マイクロクレデンシャルは卒業証明や全科目の成績の証明であり、生涯学習等のサービスにはマイロクレデン
+  シャル、留学や就職に係る事務にはマクロクレデンシャルが用いられるが、大学にとってはいずれも重要で
+  あり、両方の実運用に関する検討を進めている。
+  <br />
+  　また、ヤフー株式会社と東京大学は、FIDO (Fast Identity Online)
+  認証に関する共同研究にお いて、FIDO Notary (後述)という仕組みを考案し、FIDO
+  認証と検証可能属性証明(Verifiable Credentials, VC)との組み合わせによる自己主権
+  ID(SSI)の実装等について検討してきた。その検討
+  結果を上記の学内での取り組みに生かして学修歴証明の実運用に貢献することを目指している。
+  <br />
+  　そこで本事業では、大学等が発行した検証可能な学修歴を学習者本人が管理し、企業等の要請に
+  応じてそれを開示し、企業等がそれを検証して選考等に用いる、という一連のワークフローを実現すること
+  を目的とする。
+  <br />
+  　一方、検証可能でないものを含むさまざまな属性情報を本人が他者に開示せず安全にフル活用する
+  こと(分散マッチング)によって個人の属性情報の最大の付加価値が生み出されると期待される。たとえ
+  ば、学習者が就職先・転職先の候補である企業等を選ぶ際に学修歴等を他者に開示せずに企業のカタログと手もとでマッチングすることが考えられる。本事業はこのような分散マッチングに基づく事業の準備に当たる。
+  <br />
+  <br />
+</p>
+<h2 id="h2c7f46fd51">
+  <strong><u>課題とTrusted Webによって解決する内容</u></strong>
+</h2>
+<p>
+  <br />
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/1772e70a070d4e57b623331d1dfc8622/image.png"
+    alt=""
+  />
+  <br />
+</p>
+<h2 id="h037dc25624"><u>検証を行うデータ</u></h2>
+<p>
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/fe8ddd26670843c9b419f9de5bc0ef51/image.png"
+    alt=""
+  />
+  <br />
+</p>
+<h2 id="h88cf091cbe"><u>主な成果</u></h2>
+<ul>
+  <li>
+    <span style="color: black">
+      本人証明用の鍵ペアを生成し、その公開鍵を学習者のDIDと共にVDRに配備することによって、企業等が学習者の本人性を検証することができた
+    </span>
+  </li>
+  <li>
+    <span style="color: black">
+      BBS署名（ゼロ知識証明の方式の一つ）を実装することで、学習者が自らの好みやポリシーに応じて複数の資格情報から必要な情報をのみを抽出して記載した学修歴証明を改ざんなく生成し、企業等に提示できるようになった
+    </span>
+  </li>
+</ul>
+<p><br /></p>
+<h2 id="h9ed7331aae">
+  <strong><u>ユースケースに関連する資料</u></strong>
+</h2>
+<p>
+  ・成果概要（PPTX 2枚でまとめたもの）（
+  <a
+    href="https://www.kantei.go.jp/jp/singi/digitalmarket/trusted_web/2022seika/files/09_The_University_of_Tokyo_summary_ja.pptx"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    資料リンク
+  </a>
+  ）
+  <br />
+  ・最終成果報告書概要版（PPTXをPDF化）（
+  <a
+    href="https://www.kantei.go.jp/jp/singi/digitalmarket/trusted_web/2022seika/files/11_The_University_of_Tokyo_report_agenda.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    資料リンク
+  </a>
+  ）
+  <br />
+  ・最終成果報告書（Word文書をPDF化）（
+  <a
+    href="https://www.kantei.go.jp/jp/singi/digitalmarket/trusted_web/2022seika/files/12_The_University_of_Tokyo_report.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    資料リンク
+  </a>
+  ）
+  <br />
+  ・デモ動画（
+  <a
+    href="https://www.youtube.com/watch?v=sLku1hGVvhU"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Youtubeリンク
+  </a>
+  ）
+  <br />
+  ・ソースコード、要件定義書、基本設計書、Read me等（
+  <a
+    href="https://github.com/TrustedWebPromotionCouncil/trusted-web-use-case2022/tree/main/03_ssi_fido"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Githubリンク
+  </a>
+  ）
+</p>
