@@ -1,0 +1,216 @@
+<p>
+  2022年度「Trusted Web
+  の実現に向けたユースケース実証事業」において実証を行ったユースケースのうち、株式会社DataSignの行った「オンラインマーケティングにおけるパーソナルデータの流通」の内容をご紹介します。
+  <br />
+  <br />
+  ページ下部の各資料リンクから、より詳細な実証内容についてご覧いただけます。
+  <br />
+</p>
+<h2 id="hb031d3968a">
+  <strong><u>背景と目的</u></strong>
+</h2>
+<p>
+  　オンラインマーケティングにおいて、生活者のメールアドレスや電話番号、Cookie
+  やそれに紐づく行動履歴、位置情報などのパーソナルデータが本人の意思に関わらずさまざまな事業者によって収集されている。
+  パーソナルデータがいつの間にか知らない事業者に収集・利用され「気持ちが悪い」といった印象論だけで
+  なく、リクナビ内定辞退率問題では、就職活動における採用判断に影響を与え、ケンブリッジ・アナリティカ
+  事件では、Facebook
+  のデータが第三者に不正に利用され、選挙の結果に影響を与えるなど、オンライ
+  ンマーケティング事業者により収集されたパーソナルデータが本人の意図しない利用をされることにより、本人の権利利益を害する事案が起きている。
+  <br />
+  　これらの問題を解決するために、主に法的な対応を含めたガバナンスによって、個人の権利利益を保護するような動きは世界で活発化しているが、技術的な解決の方法は未だ社会実装されていない。
+  また、パーソナルデータを利用するオンラインマーケティング事業者にとっても、広告識別子が利用できなく
+  なっていくなどの社会情勢もあり、加えて、収集するデータがすべて正しいとは限らないため、アドフラウドや
+  ボットにより生成される不正なデータをフィルタリングする等の対策を行っているが、堂々巡りの状態が続いている。
+  <br />
+  　これらの課題を解決するために、生活者が自らのパーソナルデータをコントロールできるようにし、パーソナル
+  データを活用する事業者の正当性の検証や、データそのものの正当性の検証を可能にすることを通じて、
+  パーソナルデータの利用についての合意形成と履行の確認ができるような仕組みを構築することで、事業者はより有用なパーソナルデータを生活者の意図に沿って活用ができるようになり、生活者も安心してオン
+  ラインメディアやオンラインサービスを利用することができるようになる。
+</p>
+<h2 id="h2c7f46fd51">
+  <br />
+  <strong><u>課題とTrusted Webによって解決する内容</u></strong>
+</h2>
+<p>
+  <br />
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/d714dc0fae204b949f053043c513c750/image.png"
+    alt=""
+  />
+  <br />
+</p>
+<h2 id="h037dc25624"><u>検証を行うデータ</u></h2>
+<p>
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/356556aa9e714d59b932f397cdd0fff2/image.png"
+    alt=""
+  />
+  <br />
+</p>
+<h2 id="h88cf091cbe"><u>主な成果</u></h2>
+<ul>
+  <li>
+    <span style="color: black">
+      オンラインマーケティングにおけるパーソナルデータの流通に対し、 DID
+    </span>
+    <sup style="color: black">3</sup>
+    <span style="color: black">/VC</span>
+    <sup style="color: black">2</sup>
+    <span style="color: black">/DWN</span>
+    <sup style="color: black">4</sup>
+    <span style="color: black">
+      /OPを用いることで現在の課題を解決し得ることを、実際にシステムを構築することを通じて実証することができた
+    </span>
+  </li>
+  <li>
+    <span style="color: black">Originator Profile（OP</span>
+    <sup style="color: black">1</sup>
+    <span style="color: black">
+      ）を使用して組織の認証を行うことで、汎用的な仕組みを検討した。また、現状のOPに対して不足している部分等をフィードバックすることで、より多くのユースケースでOPが利用されるよう貢献した
+    </span>
+  </li>
+  <li>
+    <span style="color: black">
+      DID、VCやDWNのライブラリは開発途上のものが多く実装されていない機能や、定まっていないルールが散在しており現時点での開発は困難なものが多かったが、これらを利用した機能を実現することで、標準化された仕様を具体的なコードとして実装し、現在公開されているオープンソースのコードに不足している部分や補う必要のある部分を発見した。また、これらの補う必要がある部分を補完したコードを公開することで、オープンソースの開発コミュニティに貢献した
+    </span>
+  </li>
+</ul>
+<p>
+  <br />
+  <span style="color: black; font-size: 0.75em">
+    1）Originator
+    Profile（OP）：ウェブコンテンツの作成者や広告主などの認証情報を検証可能な形で付与することで、第三者認証済みのコンテンツを識別可能にする技術（https://originator-profile.org/ja-JP/structure/）
+  </span>
+  <br />
+  <span style="color: black; font-size: 0.75em">
+    2）Verifiable
+    Credential（VC）：内容の検証がオンラインで可能な自己主権型のデジタル証明書。国際標準化機関であるW3Cによって標準化されており、【発行者】(Issuer)
+    が【保持者】(Holder) に対して発行した証明書を
+  </span>
+  <br />
+  <span style="color: black; font-size: 0.75em">
+    第三者である【検証者】が検証することができるしくみ。日本ではワクチン証明書で採用実績あり（https://www.w3.org/TR/vc-data-model/
+    ）
+  </span>
+  <br />
+  <span style="color: black; font-size: 0.75em">
+    3）Decentralized
+    Identifier（DID）：国際標準機関であるW3Cによって標準化されている分散型識別子（https://www.w3.org/TR/did-core/
+    ）
+  </span>
+  <br />
+  <span style="color: black; font-size: 0.75em">
+    4）Decentralized Web
+    Node（DWN）：国際標準化機関であるDIFによって策定されている、特定の管理者に依存しないデータストアに関する技術標準（https://identity.foundation/decentralized-web-node/spec/）
+  </span>
+  <br />
+</p>
+<h2 id="h9ed7331aae">
+  <strong><u>ユースケースに関連する資料</u></strong>
+</h2>
+<p>
+  ・成果概要（PPTX 2枚でまとめたもの）（
+  <a
+    href="https://www.kantei.go.jp/jp/singi/digitalmarket/trusted_web/2022seika/files/01_DataSign_summary_ja.pptx"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    資料リンク
+  </a>
+  ）
+  <br />
+  ・最終成果報告書概要版（PPTXをPDF化）（
+  <a
+    href="https://www.kantei.go.jp/jp/singi/digitalmarket/trusted_web/2022seika/files/03_DataSign_report_agenda.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    資料リンク
+  </a>
+  ）
+  <br />
+  ・最終成果報告書（Word文書をPDF化）（
+  <a
+    href="https://www.kantei.go.jp/jp/singi/digitalmarket/trusted_web/2022seika/files/04_DataSign_report.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    資料リンク
+  </a>
+  ）
+  <br />
+  ・デモ動画（
+  <a
+    href="https://www.youtube.com/watch?v=i4ecguEUybY"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Youtubeリンク1/7
+  </a>
+  、
+  <a
+    style="background-color: #ffffff"
+    href="https://www.youtube.com/watch?v=OtkBZzUffX4"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Youtubeリンク2/7
+  </a>
+  、
+  <a
+    style="background-color: #ffffff"
+    href="https://www.youtube.com/watch?v=W_KxX7L-1JM"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Youtubeリンク3/7
+  </a>
+  、
+  <a
+    style="background-color: #ffffff"
+    href="https://www.youtube.com/watch?v=p2lJfLQsPCA"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Youtubeリンク4/7
+  </a>
+  、
+  <a
+    style="background-color: #ffffff"
+    href="https://www.youtube.com/watch?v=TWmXI0TRaTM"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Youtubeリンク5/7
+  </a>
+  、
+  <a
+    style="background-color: #ffffff"
+    href="https://www.youtube.com/watch?v=tAQ1rR6f11Y"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Youtubeリンク6/7
+  </a>
+  、
+  <a
+    style="background-color: #ffffff"
+    href="https://www.youtube.com/watch?v=nubRkx-gi10"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Youtubeリンク7/7
+  </a>
+  ）
+  <br />
+  ・ソースコード、要件定義書、基本設計書、Read me等（
+  <a
+    href="https://github.com/TrustedWebPromotionCouncil/trusted-web-use-case2022/tree/main/01_datasign"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Githubリンク
+  </a>
+  ）
+</p>
