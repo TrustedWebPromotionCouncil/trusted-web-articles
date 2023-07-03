@@ -1,0 +1,176 @@
+<p>
+  2022年度「Trusted Web
+  の実現に向けたユースケース実証事業」において実証を行ったユースケースのうち、株式会社電通の行った「中小法人・個人事業者を対象とする補助金・給付金の電子申請における「本人確認・実在証明」の新しい仕組み」の内容をご紹介します。
+  <br />
+  <br />
+  ページ下部の各資料リンクから、より詳細な実証内容についてご覧いただけます。
+  <br />
+</p>
+<h2 id="hc69c85bcf9">
+  <strong><u>背景</u></strong>
+</h2>
+<p>
+  　長年に渡り、当社グループにおいて、中小法人・個人事業者向けの補助金・給付金事務局（以下、「事務局」という）を多数担ってきた中で、「永遠の課題」とも言えるのが、申請者の「本人確認と実在証
+  明」であり、前述のとおり、中小法人・個人事業者の把握・捕捉のしづらさが、補助事業者等による不正
+  や、その確認行為に伴う事務局の審査コストの増加、そして、煩雑な申請手続きにつながっている。
+  <br />
+  　これまで、補助金等を申請するすべての中小法人・個人事業者は、あらゆる申請ごとにその都度同じよ
+  うな必要書類（登記簿や納税証明書等）を事務局に提出し、事務局での審査において、その「本人
+  確認と実在証明」を見てきたが、そういった審査を行ったとしても、事業者ごとに全数現地検査を実施で
+  きるわけではないため、本人確認と実在証明の精度は十分とは言えない。
+  <br />
+  　他方で、100％電子申請・電子業務を行っているＩＴ導入補助金においては、gBizID
+  や法人番号
+  公表サイトとの連携等により、「本人確認と実在証明」をシステムによって自動化し活用しているが、
+  gBizID 取得時に、印鑑証明の提出や SMS
+  受信による認証等が必要となり、郵送による手続きに二週間程度の時間を要することに加えて、多くの補助金では申請時に事業継続性の確認等で納税証明
+  書、確定申告書の控を提出する必要があり、申請者側の当初コストはむしろ増大していると言える。
+  <br />
+  　持続化給付金に代表されるような、緊急性を要する大規模給付金や補助金の場合、gBizID
+  発行の
+  審査・発行にかかる期間、短期間での大量発行などの運営体制の整備、申請に必要となる印鑑証明
+  書等のエビデンスの準備、事業者自体のリテラシーなどを考慮すると、gBizID
+  取得前提の運用は極めて
+  ハードルが高く、事実上対応は不可能であると考える。そのような課題感に対して、Trusted
+  Web を根
+  本的な課題解決に導く手法として活用できるのではないかと考えるに至った。
+  <br />
+</p>
+<h2 id="he2485005d0">
+  <strong><u>目的</u></strong>
+</h2>
+<p style="text-align: justify">
+  　これまで Trusted Web
+  推進協議会で行われてきた検討内容を活かしつつ、多数の補助金・給付金
+  事業等の事務局運営で培った実践ノウハウや課題認識を組み合わせ、プロトタイプシステムの開発を通
+  じて、補助金・給付金事業における Trusted Web
+  関連技術の社会実装の方向性を明らかにすること
+  を目的とする。上記を行うことで、補助金・給付金等の公的支援が、必要とする中小法人・個人事業者
+  に適切かつ迅速に到達する手法の確立と、本ユースケースを足掛かりに、その他の公的手続き等にも寄
+  与する仕組みづくりを目指している。
+</p>
+<p><br /></p>
+<h2 id="h2c7f46fd51">
+  <strong><u>課題とTrusted Webによって解決する内容</u></strong>
+</h2>
+<p>
+  <br />
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/f260133581654311a663e25ecff9c6b1/image.png"
+    alt=""
+  />
+  <br />
+</p>
+<h2 id="h037dc25624"><u>検証を行うデータ</u></h2>
+<ol>
+  <li>
+    <span style="color: black">
+      要検証な課題：申請者のなりすまし及び申請書類が改ざんされていないか
+    </span>
+  </li>
+  <li>
+    <span style="color: black">
+      検証対象（データ/データのやり取り）：VC及びエンティティ間の情報のやり取りを署名により検証している
+    </span>
+  </li>
+  <li>
+    <span style="color: black">検証方法：EdDSA及びJWSにより検証する</span>
+  </li>
+  <li>
+    <span style="color: black">検証者：申請先及び全てのデータ受信者</span>
+  </li>
+  <li>
+    <span style="color: black">
+      データの保有者：VCは証明者と申請者、VPは申請者と申請先が保有する
+    </span>
+  </li>
+  <li>
+    <span style="color: black">発行者：自治体・金融機関・税務署（証明者）</span>
+  </li>
+  <li>
+    <span style="color: black">
+      データ（VC）の置き場所：現状はローカルストレージ
+    </span>
+  </li>
+  <li>
+    <span style="color: black">
+      アクセスコントロールの手法：将来的に送信者と受信者のみがメッセージにアクセスできるようにする
+    </span>
+  </li>
+  <li>
+    <span style="color: black">
+      成果・留意点：VC、署名検証によって検証可能な領域が拡大した
+    </span>
+  </li>
+</ol>
+<p><br /></p>
+<h2 id="h88cf091cbe"><u>主な成果</u></h2>
+<ul>
+  <li>
+    <span style="color: black">
+      従来の補助金・給付金申請の流れを、Trusted
+      Webを踏まえた仕組みで電子化するための技術検討において、これまで紙の証明書やスキャンデータの添付で行っていた本人確認や実在証明を、住民票VC、口座実在証明VC、納税証明書VCに付したEdDSA署名を検証する方法で実施した。その結果、VCの発行元と内容が改竄されていないかが確認でき、技術的に実装が可能であることを確認した。また、非対面での本人確認や民間が提供するサービスも含めた既存KYCとの連携など、より効率的に行う方法を検討する必要があることを確認した。
+    </span>
+  </li>
+  <li>
+    <span style="color: black">
+      ビジネスモデルの検討においては、ステークホルダーへのヒアリング結果をもとに、①電子証明の活用によるコストダウン効果とシステム運用における負担増について　②証明者の手数料収入などのベネフィットについて　③アナログ（紙）ベースの世界からの転換に要するコストとエコシステム化へ向けた取り組みの重要性　について提言を行った。
+    </span>
+  </li>
+</ul>
+<p><br /></p>
+<h2 id="h9ed7331aae">
+  <strong><u>ユースケースに関連する資料</u></strong>
+</h2>
+<p>
+  ・成果概要（PPTX 2枚でまとめたもの）（
+  <a
+    href="https://www.kantei.go.jp/jp/singi/digitalmarket/trusted_web/2022seika/files/45_DENTSU_summary_ja.pptx"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    資料リンク
+  </a>
+  ）
+  <br />
+  ・最終成果報告書概要版（PPTXをPDF化）（
+  <a
+    href="https://www.kantei.go.jp/jp/singi/digitalmarket/trusted_web/2022seika/files/47_DENTSU_report_agenda.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    資料リンク
+  </a>
+  ）
+  <br />
+  ・最終成果報告書（Word文書をPDF化）（
+  <a
+    href="https://www.kantei.go.jp/jp/singi/digitalmarket/trusted_web/2022seika/files/48_DENTSU_report.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    資料リンク
+  </a>
+  ）
+  <br />
+  ・デモ動画（
+  <a
+    href="https://www.youtube.com/watch?v=YKNowI0wpwk"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Youtubeリンク
+  </a>
+  ）
+  <br />
+  ・ソースコード、要件定義書、基本設計書、Read me等（
+  <a
+    href="https://github.com/TrustedWebPromotionCouncil/trusted-web-use-case2022/tree/main/11_dentsu"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Githubリンク
+  </a>
+  ）
+  <br />
+</p>
