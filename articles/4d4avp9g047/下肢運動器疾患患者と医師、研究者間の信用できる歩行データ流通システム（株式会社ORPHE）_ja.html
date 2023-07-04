@@ -1,0 +1,180 @@
+<p>
+  2022年度「Trusted Web
+  の実現に向けたユースケース実証事業」において実証を行ったユースケースのうち、
+  <span style="color: #000000">DataGateway Pte. Ltd.</span>
+  の行った「分散型IDを用いた炭素排出量トレースシステム」の内容をご紹介します。
+  <br />
+  ページ下部の各資料リンクから、より詳細な実証内容についてご覧いただけます。
+  <br />
+</p>
+<h2 id="hc69c85bcf9">
+  <strong><u>背景</u></strong>
+</h2>
+<p>
+  　株式会社
+  ORPHE（以下、当社）は歩容解析（歩行速度、歩幅、着地角度、着地衝撃といった
+  様々な歩行の特徴値の解析）を可能とする靴型のウェアラブルインタフェース（以下：スマートフットウェ
+  ア）の研究開発を行なっており、近年はスマートフットウェアを変形性膝関節症（以下：膝
+  OA）などの
+  下肢運動器疾患のアセスメント（患者の症状や機能レベルを評価し、適切な治療計画を立てるための
+  プロセス）に応用する研究を行なっている。また医療現場での活用を進めるため一般医療機器（医療
+  機器クラス１）に当たる歩行分析計と対応アプリケーションの開発を進めている（図
+  1.1-1、図 1.1- 2）。
+</p>
+<p style="text-align: center">
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/d7b01d96ac1f4dfb98df7b2a58239231/image.png"
+    alt=""
+  />
+</p>
+<p style="text-align: center">
+  図 1.1-1 ORPHE FOOTWEAR EASYRUN SHIBUYA 3.0 （ソール部に ORPHE CORE
+  センサーを内蔵可能）
+</p>
+<p><br /></p>
+<p style="text-align: center">
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/8eb02959228343019978dab27dd63456/image.png"
+    alt=""
+  />
+</p>
+<p><br /></p>
+<p style="text-align: center">
+  図 1.1-2 ORPHE CORE MEDICAL
+  （歩行分析計として第三種医療機器製造販売業許可を持つ提携企業が独立行政法人医薬品医療
+  機器総合機構（PMDA）に医療機器製造販売届書を申請済）
+</p>
+<p>
+  <br />
+  　膝 OA は国内で自覚症状のある人だけでも 1,000
+  万人以上という非常に多い疾患の一つで、歩行 が妨げられるため患者の運動能力や
+  QOL に大きな影響を与える（図
+  1.1-3）。膝の痛みを恐れて外出することが怖くなり、結果として筋力低下を招き転倒率を上げてしまうといった悪循環は非常に多くみら
+  れる。この様な状況を回避するため、筋力低下の前の段階からセンサーデータとアプリケーションを活用し、
+  自分のデータとこれまでに蓄積された他の人のデータに基づいて適切な歩行動作や適切な歩数を
+  AI が
+  提案することで症状が改善することができれば、多くの人の健康寿命を伸ばすことに直結すると考えられる。
+</p>
+<p style="text-align: center">
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/d219690fd099411d93469a742dc33681/image.png"
+    alt=""
+  />
+</p>
+<p style="text-align: center">図 1.1-3 国内における膝 OA の現状</p>
+<p>
+  　下肢運動器疾患のアセスメントにおいて歩行分析は重要で、例えば人工膝関節置換術（膝
+  OA の 治療法の 1 つ）では，8 割
+  以上の医療機関において歩行分析を含むリハビリプロトコルが設定されている。一方で現状の臨床現場では目視による定性的な動作分析が多く行われており、ストップウォッチを
+  使ったタイム計測や動画撮影が主に行われていて、歩行についての詳細な分析がデータとして蓄積されて
+  いない現状がある。これまでも歩行分析計に区分される医療機器は販売されているものの、多くが
+  80 万
+  円以上など高価であることと、時間が限られるリハビリの現場で使いやすく設計されてないといった問題が
+  あり日常的な臨床の現場で用いられている件数は少なかった。この様な背景から患者の歩行データを蓄
+  積する意義は感じられていても、臨床の現場で効率的に蓄積する手段がなかったと言える。また医療従事者、患者療法へのヒアリングから、患者の日常生活における実際の歩行については臨床現場から効率
+  的にアクセスする手段がないことが窺われた。
+  <br />
+  　また一方で、データを取得できたとしても、個人情報保護の観点からそのデータを第三者に共有し活用
+  することは難しいという現状がある。当社はこれまでの研究開発の中で様々な研究機関、臨床機関と相
+  談しデータを取得し解析することを行なってきたが、事前に研究目的を設定し、同意を取ってデータを取
+  得し、別の研究目的が発生した際には同様に再度データの取得を行わなければならない研究手法には
+  非常に時間と工数がかかっている。もし患者の日常生活におけるデータ、臨床における診察のデータなど
+  が患者のダイナミックな同意（患者が状況や目的に応じていつでも同意の変更や取り消しができる形の
+  同意）に基づいて活用可能であれば、世界中の歩行研究が一気に加速すると考えられる。
+  <br />
+</p>
+<h2 id="he2485005d0">
+  <strong><u>目的</u></strong>
+</h2>
+<p style="text-align: justify">
+  この様な背景から、下肢運動器疾患を患う患者の日常的な歩行データ等の生体データとアンケート等
+  の主観的な記録データを、ウェアラブルセンサーとスマートフォンアプリを用いて記録可能とし、データの拠出
+  に紐づけてポイントを発行するシステムの必要性を感じた。またそのデータを医師や研究者、製薬会社が
+  患者の承認を得た上で活用可能とするシステムの構築を行うことで、歩行研究や歩行に関する治療法
+  の開発を加速するとともに、データ提供者にインセンティブを与えるための費用を拠出することができると考
+  えた。
+</p>
+<p><br /></p>
+<h2 id="h2c7f46fd51">
+  <strong><u>課題とTrusted Webによって解決する内容</u></strong>
+</h2>
+<p>
+  <br />
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/0b28807d613f4f4aa9098a5bce2d5615/image.png"
+    alt=""
+  />
+  <br />
+</p>
+<h2 id="h037dc25624"><u>検証を行うデータ</u></h2>
+<p>
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/1428ec9122d44435960c6c4de898074c/image.png"
+    alt=""
+  />
+  <strong style="color: white">主な成果</strong>
+  <br />
+</p>
+<h2 id="h88cf091cbe"><u>主な成果</u></h2>
+<ul>
+  <li>
+    <span style="color: black">
+      アプリの実装と数名の下肢運動器疾患患者による試用実証実験を通じて、システムの実現性や需要を確認
+    </span>
+  </li>
+  <li>
+    <span style="color: black">
+      ユーザの属性の証明、患者データの無改竄証明については実装が進んだ
+    </span>
+  </li>
+  <li>
+    <span style="color: black">
+      本事業は靴のセンサーデータに依拠しており、実際に靴を履いた人物が患者本人なのかということの証明については将来的に実装すべき課題である。この実現するためにはセンサデータの歩容認証など追加的な解析手法を取ることが必要であると判明
+    </span>
+  </li>
+</ul>
+<p><br /></p>
+<h2 id="h9ed7331aae">
+  <strong><u>ユースケースに関連する資料</u></strong>
+</h2>
+<p>
+  ・成果概要（PPTX 2枚でまとめたもの）（
+  <a
+    href="https://www.kantei.go.jp/jp/singi/digitalmarket/trusted_web/2022seika/files/21_ORPHE_summary_ja.pptx"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    資料リンク
+  </a>
+  ）
+  <br />
+  ・最終成果報告書概要版（PPTXをPDF化）（
+  <a
+    href="https://www.kantei.go.jp/jp/singi/digitalmarket/trusted_web/2022seika/files/23_ORPHE_report_agenda.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    資料リンク
+  </a>
+  ）
+  <br />
+  ・最終成果報告書（Word文書をPDF化）（
+  <a
+    href="https://www.kantei.go.jp/jp/singi/digitalmarket/trusted_web/2022seika/files/24_ORPHE_report.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    資料リンク
+  </a>
+  ）
+  <br />
+  ・デモ動画（
+  <a
+    href="https://www.youtube.com/watch?v=J2lGDe3xyh4"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Youtubeリンク
+  </a>
+  ）
+</p>
