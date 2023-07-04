@@ -65,11 +65,17 @@
   <span style="color: black">■給付金申請者のなりすまし・申請内容の改ざん</span>
   <br />
   <span style="color: black">
-    申請者のなりすましの有無を確認するために、申請書類の発行元をVCの署名検証によって検証する。具体的には、給付金執行事務局（申請先）が受け取った全てのVCをEdDSA1署名によって検証する
+    申請者のなりすましの有無を確認するために、申請書類の発行元をVCの署名検証によって検証する。具体的には、給付金執行事務局（申請先）が受け取った全てのVCをEdDSA
   </span>
+  <sup style="color: black">1</sup>
+  <span style="color: black">署名によって検証する</span>
   <br />
   <span style="color: black">
-    また、VC以外の各エンティティ間でのやり取りはJWS2の署名で検証されている。署名検証を行うことで発行元がどこか、内容が改竄されていないか確認することができ、検証可能な領域が拡大した
+    また、VC以外の各エンティティ間でのやり取りはJWS
+  </span>
+  <sup style="color: black">2</sup>
+  <span style="color: black">
+    の署名で検証されている。署名検証を行うことで発行元がどこか、内容が改竄されていないか確認することができ、検証可能な領域が拡大した
   </span>
 </p>
 <ol>
@@ -113,7 +119,18 @@
     </span>
   </li>
 </ol>
-<p><br /></p>
+<p>
+  <br />
+  <span style="color: black; font-size: 0.75em">
+    1)&nbsp;公開鍵暗号におけるデジタル署名（電子的データに関する本人証明や改ざんの防止に用いられる技術）方式の一種
+  </span>
+  <br />
+  <span style="color: black; font-size: 0.75em">
+    2)&nbsp;Json Web
+    Signature(JWS)。データ記述言語の一種であるJSON形式のデータにデジタル署名を行うための技術標準(https://www.rfc-editor.org/rfc/rfc7515)
+  </span>
+  <br />
+</p>
 <h2 id="h88cf091cbe"><u>主な成果</u></h2>
 <ul>
   <li>
