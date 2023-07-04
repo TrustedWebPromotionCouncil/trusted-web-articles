@@ -7,24 +7,260 @@
   <br />
 </p>
 <h2 id="hc69c85bcf9"><u>背景</u></h2>
-<p style="text-align: justify">
-  ITインフラ調達と運用におけるサプライチェーンセキュリティ・機器真正性セキュリティ・運用セキュリティ（含む脆弱性セキュリティ）の向上は、経済安全保障推進法の施行に見られるように、日本として国家的取り組みが求められる社会課題となっている。
+<p>
+  　臨床試験及び医療業界では、現在においても重要な情報及びプロセスが紙媒体に記録されていることが多い。これにより、紙での運用が前提となっているものが多数存在し、更新内容の把握・最新版の共
+  有方法が煩雑になり、工数を要している事例が存在する。以下がその一例である。
+  <br />
+  ＜臨床試験＞
+  <br />
+  治験薬管理表
+  <sup>1</sup>
+  、業務委任記録（Delegation Log）
+  <sup>2</sup>
+  、トレーニング記録（Training Log）
+  <sup>3</sup>
+  、 ワークシート
+  <sup>4</sup>
+  など
+  <br />
+  <br />
+  ＜実臨床現場＞
+  <br />
+  診療情報提供書 など
+  <br />
+  <br />
+  　一方、既存の医療情報電子化システムを導入している場合にも、情報の信頼性、共有・流通の利便
+  性及びコストベネフィットの観点で課題が顕在化している。以下がその一例である。
 </p>
-<p style="text-align: justify">
-  日本での今日のITインフラの調達取引において、上記要素の基礎的な検証性を提供するシステムがオープンかつ網羅的に提供されているとは言えず、各事業者の独自かつ個別な情報収集や取り組みによって個々のベンダやインテグレータを信頼することで取引が成立、即ち合意形成されているのが実態である。事業者個別の情報収集には事業者個別にコストが発生し、ベンダやインテグレータの情報提供にも個別のコストが発生することから、国家的に多大な経済的分割損をもたらすとともに、ベンダやインテグレータで発生したコストが事業者に転嫁され事業者負担が増大しやすい構造から、事業者の利益と成長の確保や利用者負担とのトレードオフにより十分な網羅性や客観性が担保されないリスクを有している。資本主義経済の原則に照らし合わせて考えれば、これらの活動がもたらす信頼性の差異化による競争性が堅持されているという観点では健全性が高いが、一方で個々のステークホルダのコスト負担能力や投資判断へのITインフラ信頼性の依存性の上昇やバラつき、規模の経済の大企業偏重化の進行など、日本全体のITインフラ信頼性や経済最適化の観点では懸念すべき事柄も共存している。
+<ul>
+  <li>
+    他人のアカウント情報を使用した医療従事者のなりすまし行為のリスクがあり、発生時にも技術
+    的に検証困難
+  </li>
+  <li>
+    システムの導入に際しては、ライセンス・構築・運用に多額のコストが必要になると共に、専門人
+    材が必要（例：臨床試験でいえば EDC（Electronic Data Capture）
+    <sup>5</sup>
+    など）
+  </li>
+  <li>
+    医療情報は非常に機密性が高く、情報の共有・流通に際しては ID
+    管理や真正性、トレーサビ
+    リティ等が特に求められるが、既存のシステムは中央集権的で単一障害点を持つため機能的に
+    必要十分ではない
+  </li>
+</ul>
+<p>
+  <br />
+  　加えて、近年、Wearable Device
+  やオンラインコミュニケーションツールの普及に伴い治療の場も病院
+  から生活の場に広がり、患者を中心としたケアを目指す方向性にシフトしており、臨床試験業界では分
+  散型臨床試験（Decentralized Clinical Trial: DCT
+  <sup>6</sup>
+  ）デザインの確立、医療業界では PHR（Personal Health Record）
+  <sup>7</sup>
+  及び EHR（Electronic Health Record）
+  <sup>8</sup>
+  データの利活用が実 現すべき大きな方向性として掲げられている
+  <sup>9</sup>
+  。これらの実現には、関係者間の信用を確保した上で情報
+  の信頼性を担保する情報流通システムが必要不可欠である。
+  <br />
+  <br />
+  　上記の現状及び将来的な方向性を鑑みて、相互に信用したユーザ/コミュニティ内で臨床試験及び医
+  療に関する電子ファイルやデータをリーズナブル且つシンプルな UI/UX
+  で共有・流通可能なシステムが必要であると考えた。その際、大前提として以下の要素について担保する必要があるが、大規模で中央集
+  権型のシステムを構築するのではなく、Keychain Pte. Ltd.（以下、Keychain
+  社）の提供する Blockchain フレームワークである Keychain Core
+  <sup>10</sup>
+  の technical capability を活用し、応用可能
+  性の高いコンセプトでの企画・開発に重点を置いた。
 </p>
-<p style="text-align: justify">
-  更に、サプライチェーンの拡大による全体系の複雑化・不透明化・予測困難化は日々進行しており、各事業者とベンダ・インテグレータの間で成立する個別の信頼をベースにした合意形成が成長と革新の阻害要因となり、国民生活の安全や国際競争力の確保するのが困難になりつつあるという実態にも何らかの打ち手が必要と考えた。
+<ul>
+  <li>自己主権型デジタルアイデンティティ（SSI）</li>
+</ul>
+<p style="padding-left: 3em">
+  ユーザーのデバイスによって制御されながら作成されるデジタルアイデンティティのことで、Keychain
+  Core の場合は暗号キーペア
 </p>
-<p style="text-align: justify">
-  ITインフラの信頼性向上という公益的な社会課題解決ユースケースの性質より、システム利用者が主体的にデータと取引をコントロールしトレースできること、システムが主体間の競争や取引の自由を制限しないこと、が現在のサプライチェーンの商流に適用するための絶対的な要件となる。そのうえで、社会的に最低限必要な共通項を括りだして管理することで、ベアミニマムコストの分割損やバラつきや経済偏重性を解消し、インフラの信頼性向上のみならず新しい経済モデルによる経済の活性化と発展を実現できると考えた。
+<ul>
+  <li>データ真正性</li>
+</ul>
+<p style="padding-left: 3em">
+  データのデジタル署名を検証する機能  データセキュリティ
+  静止時および飛行中のデータをエンドツーエンドで暗号化する機能
 </p>
-<p><br /></p>
+<ul>
+  <li>合意形成</li>
+</ul>
+<p style="padding-left: 3em">
+  アプリケーションの状態（またはデータの受け入れ）について、2
+  者の間で合意に達することができる機能
+</p>
+<p style="padding-left: 3em"><br /></p>
+<p>なお、Keychain Core は上記に加えて以下の機能を提供する。</p>
+<ul>
+  <li>キーマネジメント（暗号キーペアの管理）</li>
+  <li>ネットワークグラフ</li>
+  <li>キーロールオーバー</li>
+  <li>ID</li>
+  <li>データ検証</li>
+  <li>任意のトランザクション</li>
+</ul>
+<p>
+  <br />
+  <span style="font-size: 0.75em">
+    1
+    治験薬が管理され、治験依頼者より提供された「治験薬の管理に関する手順書」に従って、治験薬が管理され、被験
+    者に適切に使用されたことを記録しておく文書。
+  </span>
+  <br />
+  <span style="font-size: 0.75em">
+    2
+    治験のデータや被験者の安全に係るような重要な業務について、誰が何の業務を担当するかという「担当者とその責任
+    範囲」を明確にするもの。
+  </span>
+  <br />
+  <span style="font-size: 0.75em">
+    3 情報周知の証として残したトレーニング完了記録 （日付と実施者の署名等）。
+  </span>
+  <br />
+  <span style="font-size: 0.75em">
+    4
+    臨床試験等において通常カルテに記録されない試験固有の検査結果や医師の所見及び評価を中心に、実施計画書
+    （臨床試験等の実施に関する必要な事項を定めた文書。）で収集が規定されている試験データを記録する病院内で使
+    用する様式のこと。
+  </span>
+  <br />
+  <span style="font-size: 0.75em">
+    5
+    インターネットを使い電子的に臨床データを収集すること、またはそのシステムを指す。電子的臨床検査情報収集ともい
+    われる。
+  </span>
+  <br />
+  <span style="font-size: 0.75em">
+    6
+    デジタル技術を活用し、病院に来院することなく患者の自宅など遠隔地で実施する臨床試験等のこと。
+  </span>
+  <br />
+  <span style="font-size: 0.75em">
+    7 個人の健康・医療・介護に関する情報のこと。
+  </span>
+  <br />
+  <span style="font-size: 0.75em">
+    8
+    医療機関が患者の既往歴、病態把握に必要な各種検査の結果（医用画像も含む）、医師の所見と診断を記録す
+    る診療録、処方箋（オーダー情報）などを電子的に記録・管理するしくみのこと。
+  </span>
+  <br />
+  <span style="font-size: 0.75em">9</span>
+  <a
+    style="font-size: 0.75em"
+    href="https://www.mhlw.go.jp/content/12601000/000976105.pdf "
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://www.mhlw.go.jp/content/12601000/000976105.pdf
+  </a>
+  <br />
+  <span style="font-size: 0.75em">　</span>
+  <a
+    style="font-size: 0.75em"
+    href="https://www.jpma.or.jp/information/evaluation/results/allotment/lofurc000000xnw9- att/lofurc000000xo2k.pptx "
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://www.jpma.or.jp/information/evaluation/results/allotment/lofurc000000xnw9-
+    att/lofurc000000xo2k.pptx
+  </a>
+  <br />
+  <span style="font-size: 0.75em">　</span>
+  <a
+    style="font-size: 0.75em"
+    href="https://www.cas.go.jp/jp/seisaku/iryoudxsuishin/pdf/siryou6.pdf "
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://www.cas.go.jp/jp/seisaku/iryou
+  </a>
+  <a
+    style="font-size: 0.75em"
+    href="https://www.cas.go.jp/jp/seisaku/iryoudxsuishin/pdf/siryou6.pdf "
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <em>dx</em>
+  </a>
+  <a
+    style="font-size: 0.75em"
+    href="https://www.cas.go.jp/jp/seisaku/iryoudxsuishin/pdf/siryou6.pdf "
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    suishin/pdf/siryou6.pdf
+  </a>
+  <br />
+  <span style="font-size: 0.75em">　</span>
+  <a
+    style="font-size: 0.75em"
+    href="https://www.soumu.go.jp/menuseisaku/ictseisaku/ictriyou/iryoukaigo_kenkou.html "
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://www.soumu.go.jp/menu
+  </a>
+  <a
+    style="font-size: 0.75em"
+    href="https://www.soumu.go.jp/menuseisaku/ictseisaku/ictriyou/iryoukaigo_kenkou.html "
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <em>seisaku/ictseisaku/ictriyou/iryou</em>
+  </a>
+  <a
+    style="font-size: 0.75em"
+    href="https://www.soumu.go.jp/menuseisaku/ictseisaku/ictriyou/iryoukaigo_kenkou.html "
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    kaigo_kenkou.html
+  </a>
+  <br />
+  <span style="font-size: 0.75em">　</span>
+  <a
+    style="font-size: 0.75em"
+    href="https://www.mhlw.go.jp/content/10904750/000546640.pdf "
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://www.mhlw.go.jp/content/10904750/000546640.pdf
+  </a>
+  <br />
+  <span style="font-size: 0.75em">　</span>
+  <a
+    style="font-size: 0.75em"
+    href="https://www.mhlw.go.jp/content/11909500/000741661.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://www.mhlw.go.jp/content/11909500/000741661.pdf
+  </a>
+  <span style="font-size: 0.75em"></span>
+  <br />
+  <span style="font-size: 0.75em">
+    10 Keychain Core は、Singapore Fintech Award
+    など、多数の表彰を受けているアプリケーション開発フレームワー
+    ク。ブロックチェーン技術や分散台帳技術を一般的な開発チームでも実装できるような環境を提供し、自己主権的デジタ
+    ルアイデンティティ、データセキュリティ、さまざまな端末や通信環境における合意コンセンサス・取引を実装可能。
+  </span>
+  <br />
+</p>
 <h2 id="he2485005d0"><u>目的</u></h2>
 <p style="text-align: justify">
-  社会インフラ事業者を中心とした企業、官公庁・自治体・公共機関がIT機器を調達・運用する際、[1]当該製品のサプライチェーンセキュリティへの取り組みに関する十分性（第三者アセスメント結果）の検証、[2]当該製品の信頼情報とトレーサビリティの検証、[3]
-  当該信頼情報の透明性と十分性及び提供者による主体的なroot of
-  trust（信頼の証明書）の有無に関する検証、[3]当該製品と当該信頼情報の真正性（唯一無二かつ改ざんされていないこと）の検証、[4]当該製品の永続的な信頼性の検証、を提供することで、調達取引において客観的な合意形成の履行を実現し、社会インフラの信頼性向上に貢献する。
+  臨床試験及び医療現場における機密性の高い医療情報を関係者で共有する上で、旧来の紙運用
+  及び臨床試験や医療機関個別の運用に部分最適化されたシステムに依存せず、リーズナブルで且つ情
+  報の信頼性を担保するシステムを設計することで、関係者間で必要なときに必要な医療情報を共有で
+  きる環境の構築を目指す。
 </p>
 <p><br /></p>
 <h2 id="h2c7f46fd51">
