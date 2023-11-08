@@ -1,0 +1,123 @@
+<p>
+  <span style="color: #000000">
+    2023年度「Trusted Web
+    の実現に向けたユースケース実証事業」におけるユースケースのうち、Originator
+    Profile技術研究組合による「Trusted web advertising system with
+    OP」をご紹介します。
+  </span>
+  <br />
+</p>
+<h2 id="hff45178291"><u>事業内容</u></h2>
+<ul>
+  <li style="text-align: justify">
+    Originator Profile
+    技術研究組合（OPCIP）は、インターネット上のコンテンツに発信者情報を紐づける「Originator
+    Profile（OP）技術」を研究開発している。
+  </li>
+  <li style="text-align: justify">
+    OP技術を、パブリッシャー、アドテク事業者、広告主間で取引されるインターネット広告に利用する。
+  </li>
+  <li style="text-align: justify">
+    公正な第三者認証機関によって確認済みの情報が記載された ID
+    を広告に付与することにより、メディアと広告主の双方がそれぞれ信頼できる出稿元と掲載先と確認可能になり、広告流通の透明性を高める。
+  </li>
+</ul>
+<p style="text-align: justify">&nbsp;</p>
+<h2 id="h657288a447"><u>社会的・経済的な価値</u></h2>
+<ul>
+  <li style="text-align: justify">
+    広告主が悪質サイトとの広告取引を回避できる。
+  </li>
+  <li style="text-align: justify">
+    ブランドセーフティを妨げる問題の解決につながる。
+  </li>
+  <li style="text-align: justify">
+    結果として、広告費を当てにする悪質サイトの減少も期待できる。
+  </li>
+</ul>
+<p style="text-align: justify">&nbsp;</p>
+<h2 id="hba360afa21"><u>実現により解決する内容</u></h2>
+<p>
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/28263c0391cb4170ac7b4d352ff03031/opcip_%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B%E5%86%85%E5%AE%B9.png"
+    alt=""
+  />
+</p>
+<p style="text-align: justify">
+  「ネット広告は抜け穴だらけ。稼ぐ方法は腐るほどある」【1】というように、インターネット広告の仕組みは信頼性が完全に担保できているとは言えない状態にあります。この状況は、広告が掲載されるメディアの運用者とその信頼性を確認出来るメタデータを検証した上で広告取引が出来ないために発生しています。OPは、ウェブ上でコンテンツの発信者とその信頼性の判断に資する情報を検証可能なデータとして付与する技術で、Web広告市場に参加する事業者がOPを利用して取引相手の検証をしたうえで広告取引をすることで、現在のWeb広告のビジネスモデルが改善できると考えています。
+</p>
+<p style="text-align: justify">&nbsp;</p>
+<h2 id="h44783b365c"><u>実装するシステムアーキテクチャアプリ概要</u></h2>
+<p>
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/55220d80683c47d2b13d067bef552cca/opcip_%E5%9F%BA%E6%9C%AC%E8%A8%AD%E8%A8%88.png"
+    alt=""
+  />
+</p>
+<p style="text-align: justify">
+  OPの基本機能は「Webサイトやコンテンツの範囲を特定して、運営者/発行元の組織の基本情報と資格情報を検証可能とする」ことで、OPに加えて、個別のコンテンツにDP（Document
+  Profile）を紐付け、両者を組み合わせることでProfile
+  Setを生成します。署名付きOP/DP (SOP/SDP, Signed OP, Signed DP)
+  はVP準拠実装である一方で、その集合を収めるファイルはVPではなく独自のProfile
+  Set形式を定義しています。
+</p>
+<p style="text-align: justify">
+  各ページにリンクするProfile
+  SetはブラウザがDPレジストリから直接取得またはCMSで事前に取得してキャッシュしたものを取得します。
+</p>
+<p style="text-align: justify">
+  上図の「資格情報」はVCではなく、SOP (VC)
+  に含まれる認証情報や所属機関など「組織の信頼性に資する情報」です。第三者認証機関による資格情報の確認とVCとしての発行は未対応で、各機関の協力が得られ次第実装する想定です。
+</p>
+<p style="text-align: justify">
+  資格情報をVCとして流通することが一般化した将来では、その一般的なやり取りのプロトコルに則って資格情報VCのやり取りを行います。DPレジストリは今のところ登録・確認をするものではなく、SOP、SDPのストアの役割であり、Profile
+  Storeのような機能が実態となっています。
+</p>
+<p>
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/a76b40dd9a7545b8bad3fa9f2795a907/opcip_%E5%BA%83%E5%91%8A%E8%A8%AD%E8%A8%88.png"
+    alt=""
+  />
+</p>
+<p style="text-align: justify">
+  &nbsp;広告利用においては、組織情報等が紐づくOPに加え、広告主側で個別の広告キャンペーンに紐づくAP（Advertising
+  Profile）、メディア側で記事などのコンテンツに紐づくDP（Document
+  Profile）を登録し、それぞれが署名されたOP（SOP, Signed Originator
+  Profile）と組み合わせることでProfile Setを生成します。
+</p>
+<p>
+  <span style="color: #000000">
+    &nbsp;&nbsp;既存のRTB（Real Time
+    Bidding）に副作用がないように、パフォーマンスオーバーヘッドを小さく、信頼性を担保する仕組みを議論している。RTB内に直接SOPやAPをVC形式で埋め込むかどうかも含めて検討中のため、上図ではRTBでのVC流通を明示していません。
+  </span>
+  <br />
+</p>
+<h2 id="h9ed7331aae"><u>ユースケースに関連する資料</u></h2>
+<ul>
+  <li>
+    <span style="color: black">中間報告（</span>
+    <a
+      style="color: black"
+      href="https://www.youtube.com/watch?v=yhM9GlZJ-fg"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      YouTubeリンク
+    </a>
+    <span style="color: black">）</span>
+  </li>
+</ul>
+<p><br /></p>
+<h3 style="text-align: justify" id="hdf0456f9a2">
+  <strong><u>引用</u></strong>
+</h3>
+<p>
+  【１】&nbsp;&nbsp;
+  <a
+    href="https://www.yomiuri.co.jp/national/20230919-OYT1T50184/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://www.yomiuri.co.jp/national/20230919-OYT1T50184/
+  </a>
+</p>
