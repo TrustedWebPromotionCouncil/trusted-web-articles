@@ -1,0 +1,188 @@
+<p style="text-align: justify">
+  <span style="color: #000000">
+    2023年度「Trusted Web
+    の実現に向けたユースケース実証事業」におけるユースケースのうち、株式会社DataSignによる「ウォレットによるアイデンティティ管理とオンラインコミュニケーション」をご紹介します。
+  </span>
+</p>
+<p style="text-align: justify"><br /></p>
+<h2 id="hff45178291"><u>事業内容</u></h2>
+<ul>
+  <li style="text-align: justify">
+    国際標準やデファクトスタンダートとなり得る技術（OID4VCI, OID4VP,
+    SIOPv2等)&nbsp;をベースにユーザが自身のアイデンティティを管理でき、汎用的に利用できるアイデンティティウォレットをUI/UXを重視して開発
+    [1 - 4]
+  </li>
+  <li style="text-align: justify">
+    &nbsp;選択的開示 (Selective Disclosure)
+    技術を利用した必要最小限の情報提供によりプライバシー・バイ・デザインを実現
+  </li>
+  <li style="text-align: justify">
+    &nbsp;相互に検証可能で安全なメッセージングプロトコルを検討し、誰でも参加可能なメッセージングサービスの開発
+  </li>
+  <li style="text-align: justify">
+    特定のプラットフォームや事業者に依存することなく、アイデンティティウォレットをベースとしたさまざまなユースケースで利用でき、かつ相互運用可能なデータのやりとりの実現を検討
+  </li>
+  <li style="text-align: justify">
+    <span style="color: #000000">
+      オープンソースプロジェクトとしてコミュニティと連携し、社会実装/普及を検討
+    </span>
+  </li>
+</ul>
+<p style="text-align: justify"><br /></p>
+<h2 id="h657288a447"><u>社会的・経済的な価値</u></h2>
+<p style="text-align: justify">・試算①</p>
+<ul>
+  <li style="text-align: justify">
+    現在のオンラインコミュニケーション（オンラインにおける属性情報やメッセージのやりとり）の市場規模は、これらのビジネスモデルがパーソナルデータを用いた広告によって成り立っていることを鑑みると世界で約６３兆円程度となります[5]
+  </li>
+  <li style="text-align: justify">
+    オンラインコミュニケーションの10％がTrusted
+    Webに移行すると仮定すると、6.3兆円程度の市場規模となります
+  </li>
+</ul>
+<p style="text-align: justify"><br /></p>
+<p style="text-align: justify">・試算②</p>
+<ul>
+  <li style="text-align: justify">
+    BtoCサービスにおける広告型フリーミアムモデル（課金すると広告が出ない、YouTubeプレミアム等）や広告型割引モデル（広告を視聴すると割引がある、Netflix等）の採用例を参考にすると、BtoCサービスにおける一人当たりの売上はおよそ月額200円～1000円程度です[6]
+  </li>
+  <li style="text-align: justify">
+    これはヒアリングにおいて生活者が支払ってよいと考える金額と同程度であり、現在のSNS利用者の10%が移行すると仮定すると、46億人×10%×1000円×12ヵ月
+    = 5.5兆円程度の市場規模となります
+  </li>
+</ul>
+<p style="text-align: justify"><br /></p>
+<p style="text-align: justify">
+  <span style="color: #000000">
+    これらの試算を鑑みると、オンラインコミュニケーション市場において10%がTrusted
+    Webに移行すると仮定すると、世界で５～６兆円の市場規模が見込まれます。（世界における日本のGDP割合から日本における市場規模は3500億円が見込まれます）
+    [7]　
+  </span>
+</p>
+<p style="text-align: justify"><br /></p>
+<h2 id="hc556347713"><u>Trusted Webの実現により解決する内容</u></h2>
+<p style="text-align: justify">
+  本ユースケース実証では、国際標準技術をベースとしたウォレットを開発し、生活者はサービス事業者へ検証可能な必要最小限の属性情報を渡すことによって、情報自体の信頼性を確保します。
+</p>
+<p style="text-align: justify">
+  また、分散型メッセージングプロトコルを利用した属性情報が検証されていることが確認できるメッセージングサービスを開発することで、生活者は特定の事業者へ依存せず通信相手を検証しメッセージのやり取りを行います。
+</p>
+<p style="text-align: justify">
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/301e306aa0014928a65a131f1af33a8c/Trusted%20Web%E3%81%AE%E5%AE%9F%E7%8F%BE%E3%81%AB%E3%82%88%E3%82%8A%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B%E5%86%85%E5%AE%B9_DataSign.png"
+    alt=""
+  />
+</p>
+<p style="text-align: justify"><br /></p>
+<h2 id="h44783b365c"><u>実装するシステムアーキテクチャアプリ概要</u></h2>
+<p style="text-align: justify">
+  <span style="color: #000000">
+    欧州など世界各地の関連プロジェクトで採用が検討されている標準プロトコルにのっとりアプリケーションを実装することで、相互運用性の高いシステムアーキテクチャの実現を目指します。
+  </span>
+</p>
+<p style="text-align: justify">
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/a1bc76725e5748e8907085d3bb3e3ada/%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3%E3%82%A2%E3%83%97%E3%83%AA%E6%A6%82%E8%A6%81_DataSign.png"
+    alt=""
+  />
+</p>
+<p style="text-align: justify"><br /></p>
+<h2 id="h9ed7331aae"><u>ユースケースに関連する資料</u></h2>
+<ul>
+  <li style="text-align: justify">
+    <span style="color: #000000">
+      開発したウォレットアプリ等はオープンソースソフトウェアとして公開し、OWND
+      Projectと名付けたコミュニティによって運用を行います。
+    </span>
+    <a
+      href="https://github.com/OWND-Project"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      https://github.com/OWND-Project
+    </a>
+  </li>
+  <li>
+    中間報告（
+    <a
+      href="https://www.youtube.com/watch?v=F3RL5AWeYKs"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      YouTubeリンク
+    </a>
+    ）
+  </li>
+</ul>
+<p style="text-align: justify"><br /></p>
+<h3 id="hdf0456f9a2"><u>引用</u></h3>
+<p style="text-align: justify">
+  [1] The European Digital Identity Wallet Architecture and Reference Framework,
+  <a
+    href="https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework
+  </a>
+</p>
+<p style="text-align: justify">
+  [2] OpenID for Verifiable Credential Issuance,
+  <a
+    href="https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html
+  </a>
+</p>
+<p style="text-align: justify">
+  [3] OpenID for Verifiable Presentations,
+  <a
+    href="https://openid.net/specs/openid-4-verifiable-presentations-1_0.html"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://openid.net/specs/openid-4-verifiable-presentations-1_0.html
+  </a>
+</p>
+<p>
+  [4] Self-Issued OpenID Provider v2,
+  <a
+    href="https://openid.net/specs/openid-connect-self-issued-v2-1_0.html"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://openid.net/specs/openid-connect-self-issued-v2-1_0.html
+  </a>
+</p>
+<p style="text-align: justify">
+  [5] statista,
+  <a
+    href="https://www.statista.com/topics/2498/programmatic-advertising/#topicOverview"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://www.statista.com/topics/2498/programmatic-advertising/#topicOverview
+  </a>
+</p>
+<p style="text-align: justify">
+  [6] DATAREPORTAL,
+  <a
+    href="https://datareportal.com/reports/digital-2022-global-overview-report"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://datareportal.com/reports/digital-2022-global-overview-report
+  </a>
+</p>
+<p style="text-align: justify">
+  [7]内閣府,
+  <a
+    href="https://www.esri.cao.go.jp/jp/sna/data/data_list/kakuhou/files/2020/sankou/pdf/kokusaihikaku_20211224.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://www.esri.cao.go.jp/jp/sna/data/data_list/kakuhou/files/2020/sankou/pdf/kokusaihikaku_20211224.pdf
+  </a>
+</p>

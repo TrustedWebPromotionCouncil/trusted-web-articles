@@ -1,0 +1,183 @@
+<p style="text-align: justify">
+  <span style="color: #000000">
+    2023年度「Trusted Web
+    の実現に向けたユースケース実証事業」におけるユースケースのうち、シミック株式会社による「臨床試験及び医療現場における信頼性及び応用可能性の高い情報流通システム」をご紹介します。
+  </span>
+</p>
+<p style="text-align: justify"><br /></p>
+<h2 id="hff45178291"><u>事業内容</u></h2>
+<p style="text-align: justify">
+  日常診療及び臨床試験等における「患者/被験者」、「医療機関スタッフ」、「製薬企業/CROスタッフ」の間において、複数のPHR（ウェアラブルデバイス）の適切な利活用を実現するシステム、ビジネスモデルの検討・構築。
+</p>
+<ol>
+  <li style="text-align: justify">
+    より完全なデータインテグリティの実現のため、データの発生源であり種類の異なる複数のウェアラブルデバイスにDIDを実装し、ユーザー（患者/被験者）のDIDとのペアリング
+  </li>
+  <li style="text-align: justify">本人確認及び同意取得（eConsent）</li>
+  <li style="text-align: justify">
+    複数の異なるウェアラブルデバイス等のPHRの利活用
+  </li>
+  <li style="text-align: justify">１,2,3をシームレスに連携する制御機構</li>
+  <li style="text-align: justify">
+    PHR利活用やDCTモデルの臨床試験の計画立案のコンサルテーション
+  </li>
+</ol>
+<p style="text-align: justify">&nbsp;</p>
+<h2 id="h657288a447"><u>社会的・経済的な価値</u></h2>
+<p style="text-align: justify">
+  医薬品等の開発市場における現状と課題として、世界の製薬市場は持続的成長が見込まれるが、本邦は市場が縮小し、売上・国際競争力低下の懸念がある。
+  <sup>[1], [2], [3], [4]</sup>
+</p>
+<p style="text-align: justify">
+  日本の医薬品等の開発市場には、非連続的なイノベーションによる構造改革が必要であり、オンライン診療及びDCTデザインの臨床試験において、「治験参加同意取得（eConsent）時に遠隔での本人確認手法としてより精度の高い手法」、「ウェアラブルデバイス利活用に関する運用コストの増大等」、「リモートでの臨床検査結果やその他のPDF媒体においても主流はFAXでの授受であり、よりセキュアな環境整備」などの課題が顕在化している。
+</p>
+<p style="text-align: justify">
+  本事業で実証・開発予定のシステムは、前述の課題解決のために、以下の社会的・経済的な価値を提供・提言できると考える。
+</p>
+<ul>
+  <li style="text-align: justify">
+    臨床試験及び医療現場における情報共有の信頼性向上、検証領域の拡大及びコスト削減を実現しつつ、応用可能性の高いコンセプトの実現
+  </li>
+  <li style="text-align: justify">
+    医薬品開発及び医療業界の国際競争力の向上に寄与
+  </li>
+  <li style="text-align: justify">
+    臨床試験及び医療現場における情報共有の新たなオペレーションの提言
+  </li>
+  <li style="text-align: justify">
+    臨床試験及び医療現場におけるレギュレーションの見直しへの提言
+  </li>
+  <li style="text-align: justify">
+    日常診療におけるリモートでの本人確認・同意取得からウェアラブルデバイス等のPHR利活用
+  </li>
+</ul>
+<p style="text-align: justify">&nbsp;</p>
+<h2 id="hc556347713"><u>Trusted Webの実現により解決する内容</u></h2>
+<p style="text-align: justify">
+  <span style="color: #000000">
+    患者・被験者が所有するデバイス(スマートフォン、ウェアラブルデバイス)それぞれに個別のDIDを実装した上で統合管理(DID
+    mapping)することで、医師等の第三者へのデータ提供に対する同意の意思表示をタッチポイントとして、信頼関係の構築から同意の範囲内での複数デバイスのデータ提供までをシームレスに実現する。
+  </span>
+</p>
+<p style="text-align: justify">
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/0973080f2ffa461d94232e021b744c2a/Web%E3%81%AE%E5%AE%9F%E7%8F%BE%E3%81%AB%E3%82%88%E3%82%8A%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B%E5%86%85%E5%AE%B9%20%E3%82%B7%E3%83%9F%E3%83%83%E3%82%AF.png"
+    alt=""
+  />
+</p>
+<p style="text-align: justify"><br /></p>
+<h2 id="h44783b365c"><u>実装するシステムアーキテクチャアプリ概要</u></h2>
+<p style="text-align: justify">
+  異なるアイデンティティ間における信頼関係の構築を実現するシステムは、前回の「Trusted
+  Webの実現に向けたユースケース実証事業」で開発したプロトタイプシステムが基盤となる。
+</p>
+<ul>
+  <li style="text-align: justify">
+    患者/被験者のスマートフォンに実装したDID（例：DIDA）と同一ユーザがもつ複数のウェアラブルデバイスに実装したDID（例：DIDA1,DIDA2）に属性を付与することでDID
+    mappingを行い、スマートフォンに実装したDIDをハブとして他のユーザの持つDIDとpairing（DID交換）を行うことで、DID
+    mappingされた全てのデバイスデータをシームレスに共有可能とする。
+  </li>
+  <li style="text-align: justify">
+    <span style="color: #000000">
+      治験参加に対する同意取得というタッチポイントにおいて、ユーザ（患者/被験者）のスマートフォンに実装したDIDと医療機関側もしくは製薬企業/CRO側のスタッフのDIDとのペアリングを行うことで、DID
+      mappingされたユーザの全てのデバイスデータを同意の範囲内（期間など）で医療従事者側もしくは製薬会社側のスタッフに提供する。
+    </span>
+  </li>
+</ul>
+<p style="text-align: justify"><br /></p>
+<p style="text-align: justify">
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/8e570c23c8cd4c2288a758a7c233fbb9/%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3%E3%82%A2%E3%83%97%E3%83%AA%E6%A6%82%E8%A6%81%20%E3%82%B7%E3%83%9F%E3%83%83%E3%82%AF.png"
+    alt=""
+  />
+</p>
+<p style="text-align: justify"><br /></p>
+<h2 id="h9ed7331aae"><u>ユースケースに関連する資料</u></h2>
+<ul>
+  <li>
+    Digital Health Technologies (DHT) for Remote Data Acquisition in Clinical
+    Investigations
+    <a
+      href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      https://www.fda.gov/regulatory-information/search-fda-guidance-documents/digital-health-technologies-remote-data-acquisition-clinical-investigations
+    </a>
+  </li>
+  <li>
+    昨年度実証成果報告
+    <a
+      href="https://area18.smp.ne.jp/area/table/45203/eiWhIk/M?S=retbr2mbmbse"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      https://area18.smp.ne.jp/area/table/45203/eiWhIk/M?S=retbr2mbmbse
+    </a>
+  </li>
+  <li>
+    <span style="color: black">中間報告（</span>
+    <a
+      style="color: black"
+      href="https://www.youtube.com/watch?v=Bm7c2ERQXOg"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      YouTubeリンク
+    </a>
+    <span style="color: black">）</span>
+  </li>
+</ul>
+<p><br /></p>
+<h3 id="hdf0456f9a2"><u>引用</u></h3>
+<p>
+  [1] 医薬品産業ビジョン2021
+  <a
+    href="https://www.mhlw.go.jp/content/10800000/000831974.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://www.mhlw.go.jp/content/10800000/000831974.pdf
+  </a>
+  <br />
+  [2]ドラッグ・ラグの試算; PMDA
+  <a
+    href="https://www.pmda.go.jp/files/000249387.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://www.pmda.go.jp/files/000249387.pdf
+  </a>
+  <br />
+  [3]ドラッグ・ラグ：国内未承認薬の状況とその特徴; 製薬協
+  <a
+    href="https://www.jpma.or.jp/news_room/newsletter/205/05pc-01.html"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://www.jpma.or.jp/news_room/newsletter/205/05pc-01.html
+  </a>
+  <br />
+  [4]日本がグローバル試験から排除される日; PhRMA/EFPIA
+  <a
+    href="https://www.phrma-jp.org/wordpress/wp-content/uploads/2018/10/2018CRCslide.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://www.phrma-jp.org/wordpress/wp-content/uploads/2018/10/2018
+  </a>
+  <a
+    href="https://www.phrma-jp.org/wordpress/wp-content/uploads/2018/10/2018CRCslide.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <em>CRC</em>
+  </a>
+  <a
+    href="https://www.phrma-jp.org/wordpress/wp-content/uploads/2018/10/2018CRCslide.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    slide.pdf
+  </a>
+</p>

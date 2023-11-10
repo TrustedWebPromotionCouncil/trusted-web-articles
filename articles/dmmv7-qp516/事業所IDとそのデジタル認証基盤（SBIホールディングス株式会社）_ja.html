@@ -1,0 +1,257 @@
+<p>
+  <span style="color: #000000">
+    2023年度「Trusted Web
+    の実現に向けたユースケース実証事業」におけるユースケースのうち、SBIホールディングス株式会社による「事業所IDとそのデジタル認証基盤」をご紹介します。
+  </span>
+  <br />
+</p>
+<h2 id="hff45178291"><u>事業内容</u></h2>
+<p style="text-align: justify">
+  「事業所IDとそのデジタル認証基盤」は、事業所の実在性を保証する事業所IDを使って、事業所間でやり取りする情報（Information）の真正性を保証することで、業種・業界および国をまたがるサプライチェーン情報の信頼性向上に資することを目的としている。
+</p>
+<p style="text-align: justify"><br /></p>
+<ul>
+  <li style="text-align: justify">
+    事業所ID
+    <ul>
+      <li style="text-align: justify">
+        本実証事業では、事業所のIdentityを証明するデジタル証明書を指す。
+      </li>
+      <li style="text-align: justify">
+        このデジタル証明書は、発行依頼者（Holder）が作成したDIDに対し、信頼できる第三者のデジタル署名を付与した検証可能なVerifiable
+        Credentials （VC）とする。
+      </li>
+    </ul>
+  </li>
+</ul>
+<p style="text-align: justify"><br /></p>
+<ul>
+  <li style="text-align: justify">
+    デジタル認証基盤
+    <ul>
+      <li style="text-align: justify">
+        本実証事業では、公的機関から信頼できる第三者として認定されたデジタル認証機構に対し、認定の証としてデジタル証明書（VC）を発行する。
+      </li>
+      <li style="text-align: justify">
+        このデジタル認証機構が、事業所に対し、事業所IDの発行・更新・失効機能を有する。
+      </li>
+      <li style="text-align: justify">
+        公的機関、デジタル認証機構およびそれらが持つ機能を総称して「デジタル認証基盤」と呼ぶ。
+      </li>
+    </ul>
+  </li>
+</ul>
+<p style="text-align: justify"><br /></p>
+<ul>
+  <li style="text-align: justify">
+    事業所
+    <ul>
+      <li style="text-align: justify">
+        デジタル認証機構に事業所IDの発行申請をする。
+      </li>
+      <li style="text-align: justify">
+        事業所のVerifiable
+        Presentation（VP）の中に既存システムで授受されている製品情報等のデータを包むことで、データの信頼性が確保できる仕組みを検証する。
+      </li>
+    </ul>
+  </li>
+</ul>
+<p style="text-align: justify">&nbsp;</p>
+<p style="text-align: justify">【注記】本実証事業における事業所のVP定義</p>
+<p style="text-align: justify">
+  事業所が発行するVerifiable
+  Presentation（VP）は、事業所（VC）と真正性を証明したい情報等（それをVC化したものを想定）を内包したデジタル証明書一式を指す。
+</p>
+<p style="text-align: justify">&nbsp;</p>
+<h2 id="h657288a447"><u>社会的・経済的な価値</u></h2>
+<p style="text-align: justify">
+  EU主導によるEUバッテリー規則【1】や、エコデザイン規則案（ESPR）その延長線上にあるDPP（Digital
+  Product
+  Passport）【2】など次々と提案される規則においてサプライチェーンおよび製品・サービスの信頼性に対する要求が益々高まっている。
+</p>
+<p style="text-align: justify">
+  今回の実証事業で提案する仕組み、およびそれと表裏一体で進める国際標準化によって、これら規制への準拠や検証に要する時間とコストを低減し、製品の構成要素（BOM情報等）および品質保証情報等の真正性を保証する事が期待される。
+</p>
+<ul>
+  <li style="text-align: justify">
+    社会的価値
+    <ul>
+      <li style="text-align: justify">
+        事業所間でやり取りする情報（Information）の真正性を保証
+      </li>
+      <li style="text-align: justify">
+        業界・業種および国をまたがるサプライチェーンの信頼性向上
+      </li>
+      <li style="text-align: justify">偽造品・模倣品の排除</li>
+    </ul>
+  </li>
+  <li style="text-align: justify">
+    経済的価値
+    <ul>
+      <li style="text-align: justify">
+        信頼性を担保するために必要とされる様々な対策コストの低減
+      </li>
+      <li style="text-align: justify">
+        <span style="color: #000000">
+          情報の改ざんや偽造品・模倣品の混入が発覚した場合の被害および対応コストの低減
+        </span>
+      </li>
+    </ul>
+  </li>
+</ul>
+<p style="text-align: justify"><br /></p>
+<h2 id="he4ca68c879"><u>Webの実現により解決する内容</u></h2>
+<p style="text-align: justify">
+  現在、サプライチェーンに沿って取引先の間で情報を受け渡す際には、左側に示すような課題が存在しており、データの透明性と信頼性の確保が難しい（もしくは局所的にしか確保できない）。
+</p>
+<p style="text-align: justify">
+  <span style="color: #000000">
+    この課題解決には、業種・業界を横断し更に国を横断した、サプライチェーンに参加する事業者・事業所の真正性を保証する仕組み（右側に示すようなネットワーク）の実現が必要と考える。
+  </span>
+</p>
+<p style="text-align: justify">
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/52b011b7143448c3b924d4757500ada7/Web%E3%81%AE%E5%AE%9F%E7%8F%BE%E3%81%AB%E3%82%88%E3%82%8A%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B%E5%86%85%E5%AE%B9SBI%E3%83%9B%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B9.png"
+    alt=""
+  />
+</p>
+<p style="text-align: justify"><br /></p>
+<h2 id="h44783b365c"><u>実装するシステムアーキテクチャアプリ概要</u></h2>
+<ul>
+  <li>
+    公的機関​
+    <ul>
+      <li>
+        法律に基づき信頼できるトラストアンカーとしてデジタル認証機構を認定し、公的なデジタル証明書（VC）を発行する。​
+      </li>
+    </ul>
+  </li>
+  <li>
+    デジタル認証機構​
+    <ul>
+      <li>
+        発行サービス（API）
+        <ul>
+          <li>
+            認証した事業所に対し事業所（VC）の発行・更新・失効機能を有する。
+          </li>
+        </ul>
+      </li>
+      <li>
+        失効管理サービス（API）
+        <ul>
+          <li>事業所（VC）の無失効/失効の照会に返答する。</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    Trusted List
+    <ul>
+      <li style="text-align: justify">
+        公的機関のデジタル署名を検証するために必要な公的機関の公開鍵等を含んだ「Trusted
+        List」を国ごとに準備する。
+      </li>
+    </ul>
+  </li>
+</ul>
+<p>
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/a3fdb8ee4ee24ac2a3076fc94ce22040/%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3%E3%82%A2%E3%83%97%E3%83%AA%E6%A6%82%E8%A6%81SBI%E3%83%9B%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B9.png"
+    alt=""
+  />
+  <br />
+</p>
+<h2 id="h9ed7331aae"><u>ユースケースに関連する資料</u></h2>
+<ul>
+  <li style="text-align: justify">ケース１（On-boarding）</li>
+</ul>
+<p style="padding-left: 3em; text-align: justify">
+  取引先と新規契約をする際、契約書と一緒に、「事業所ID」を含んだVPを作成し、取引相手は個別に事業所のDue
+  Diligence（DD）をやらなくても、VPをVerify(証明書の確認)することで真正性を確認できる。
+</p>
+<p style="text-align: justify">
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/43e9583185c9432da1eba18956a8c59e/%E3%83%A6%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%82%B9%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%B3%87%E6%96%99SBI%E3%83%9B%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B9.png"
+    alt=""
+  />
+</p>
+<ul>
+  <li style="text-align: justify">ケース２（On-going）</li>
+</ul>
+<p style="padding-left: 3em">
+  <span style="color: #000000">
+    ICTメーカーが、海外を含めた複数の取引先からネットワーク機器に関する製品を購入する際、サプライヤーは「製品のVC」と「製品の製造者を証明する事業所ID」を合わせたVPを作成し、バイヤーはVPをVerify(証明書の確認)することで製品の真正性を確認する。
+  </span>
+</p>
+<p>
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/9a66542313c64f049a881db5f3b2a6a2/%E3%83%A6%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%82%B9%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%B3%87%E6%96%99%EF%BC%92SBI%E3%83%9B%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B9%E3%83%9B%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B9.png"
+    alt=""
+  />
+  <br />
+</p>
+<ul>
+  <li>
+    <span style="color: black">中間報告（</span>
+    <a
+      style="color: black"
+      href="https://www.youtube.com/watch?v=JSRRar1KEjE"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      YouTubeリンク
+    </a>
+    <span style="color: black">）</span>
+  </li>
+</ul>
+<p><br /></p>
+<h3 id="hdf0456f9a2"><u>引用</u></h3>
+<p style="text-align: justify">【1】EUバッテリー規則</p>
+<p style="padding-left: 3em">
+  <a
+    href="https://www.jetro.go.jp/biznews/2023/08/8c1881cdd8bc5842.html"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    電池のライフサイクル全体を規定するバッテリー規則施行(EU) | ビジネス短信
+    ―ジェトロの海外ニュース - ジェトロ (jetro.go.jp)
+  </a>
+</p>
+<p style="padding-left: 3em">
+  <a
+    href="https://eur-lex.europa.eu/eli/reg/2023/1542/oj"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    EUR-Lex - 32023R1542 - EN - EUR-Lex (europa.eu)
+  </a>
+</p>
+<p>
+  &nbsp;
+  <br />
+  【2】エコデザイン規則案（ESPR）とDPP（Digital Product Passport）：
+</p>
+<p style="padding-left: 3em">
+  <a
+    href="https://www.jetro.go.jp/biznews/2022/04/a08c5c6a05bd0c33.html"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    欧州委、循環型経済を推進するためのエコデザイン規則案を発表(EU) |
+    ビジネス短信 ―ジェトロの海外ニュース - ジェトロ (jetro.go.jp)
+  </a>
+</p>
+<p style="padding-left: 3em">
+  <a
+    href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=COM%3A2022%3A0142%3AFIN"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    EUR-Lex - 52022PC0142 - EN - EUR-Lex (europa.eu)
+  </a>
+  　
+</p>
+<p style="padding-left: 6em">
+  ※DPPについてはCHAPTER Ⅲ Article8およびANNEX Ⅲに記載
+</p>

@@ -1,0 +1,165 @@
+<p>
+  2023年度「Trusted Web
+  の実現に向けたユースケース実証事業」におけるユースケースのうち、株式会社電通国際情報サービスによる『「KYC/KYBに基づいたトラストのある取引」を促進する新しい仕組み』をご紹介します。
+  <br />
+</p>
+<h2 id="hff45178291"><u>事業内容</u></h2>
+<ul>
+  <li>
+    現状のKYB（法人の本人確認）は、企業において取引先との新規取引開始時などに実施されている。事前ヒアリングの結果、金融機関等の企業におけるKYBは、犯罪収益移転防止法で定められた事項に沿いつつ、企業のポリシーにおいて実施されており、情報の再利用などの効率化は進んでいないことがわかった。
+  </li>
+  <li>
+    今後Trusted
+    Web技術を活用することで、エンティティ間をまたいだ情報のトラストが検証可能となり、KYC/KYBに関する証明書の発行者が検証可能な証明書（VC：Verifiable
+    Credentials）を提供できるようになれば、KYC/KYBのデータの再利用が可能となって効率化し、インターネット上のトラストのある取引を促進する可能性がある。
+  </li>
+  <li>
+    本実証事業では、「金融機関における法人口座の開設」を例に、KYC/KYBに基づいたトラストのある取引を促進する新しい仕組みの検討と検証を行う。
+  </li>
+  <li>
+    本実証事業における発行者（アクシオン：KYC/KYBによるVC発行事業者）は、所有者（法人）が検証者（金融機関）との取引（法人口座の開設）の際に、所有者（法人）からKYBの依頼を受けてKYC/KYBによるVCを発行する。
+  </li>
+  <li>
+    発行者は、所有者または検証者が支払うVCの発行手数料やシステム利用料に基づき運営を行う想定である。&nbsp;
+  </li>
+  <li>
+    システム利用料の負担者については、実際のビジネスにおいても過去の取引関係など様々な状況によって変動すると思われるため、所有者または検証者のどちらかが負担する、あるいは両方がそれぞれ負担する場合なども検討する。
+  </li>
+  <li>
+    システム利用料については、金融機関等にアイデアを説明し、本実証事業の実証実験においてシステムのテスト利用やフィードバックの提供に協力いただく予定。
+  </li>
+</ul>
+<p><br /></p>
+<h2 id="h657288a447"><u>社会的・経済的な価値</u></h2>
+<ul>
+  <li>
+    登記簿謄本原本、印鑑証明書原本、納税証明書、担当者の身分証明書の提出の際に、申請者側の情報取得ならびに提示にかかる負担、申請先での情報確認作業の大幅な軽減が見込まれる。
+  </li>
+  <li>VCを用いることで受取情報も検証可能になる。</li>
+</ul>
+<p><br /></p>
+<h2 id="hc556347713"><u>Trusted Webの実現により解決する内容</u></h2>
+<p style="text-align: justify">
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/009020e24ae14119a2353f97304db41e/Web%E3%81%AE%E5%AE%9F%E7%8F%BE%E3%81%AB%E3%82%88%E3%82%8A%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B%E5%86%85%E5%AE%B9ISID.png"
+    alt=""
+  />
+</p>
+<p style="text-align: justify"><br /></p>
+<h2 id="h44783b365c"><u>実装するシステムアーキテクチャアプリ概要</u></h2>
+<ul>
+  <li style="text-align: justify">
+    発行者が所有者（法人/担当者）に対してKYC/KYBに関するVCを発行し、所有者が検証者にVPとして提示するシステムを構築する。
+  </li>
+  <li style="text-align: justify">
+    発行者によるVCの発行と所有者のやり取りには前述のOID4VCIとSD-JWT
+    VCを使用し、所有者と検証者のやり取りにはOID4VPとSIOP v2を使用する。
+  </li>
+  <li style="text-align: justify">
+    所有者はISID Identity
+    WalletでVCの管理を行う。認証には、FIDOのWebAuthnを使用する。
+  </li>
+  <li style="text-align: justify">
+    秘密鍵の管理には、ブロックチェーン「Internet Computer
+    Protocol」（以後ICP）のThreshhold ECDSA Signatureを用いる。
+  </li>
+</ul>
+<p style="text-align: justify">
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/e424abcefa424465b7d7783304fd26d8/%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3%E3%82%A2%E3%83%97%E3%83%AA%E6%A6%82%E8%A6%81ISID.png"
+    alt=""
+  />
+</p>
+<p style="text-align: justify"><br /></p>
+<h2 id="h9ed7331aae"><u>ユースケースに関連する資料</u></h2>
+<ul>
+  <li style="text-align: justify">
+    <span style="color: black">中間報告（</span>
+    <a
+      style="color: black"
+      href="https://www.youtube.com/watch?v=mndqlplgsos"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      YouTubeリンク
+    </a>
+    <span style="color: black">）</span>
+  </li>
+</ul>
+<p style="text-align: justify"><br /></p>
+<h3 id="hdf0456f9a2"><u>引用</u></h3>
+<p>
+  OpenID for Verifiable Credential Issuance (OID4VCI)：
+  <br />
+  OID4VCIは、OAuth2.0プロトコルの認可の仕組みにおいて、証明者が申請者に対してVCを発行する際に使用されるAPIを定義する仕様である。(
+  <a
+    href="https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html
+  </a>
+  )
+  <br />
+  &nbsp;
+  <br />
+  OpenID for Verifiable Presentations（OID4VP）：
+  <br />
+  OID4VPは、OAuth2.0プロトコルの認可の仕組みにおいて、申請者が申請先に対してVerifiable
+  Presentationsの形式でクレームの提示を可能にする仕様である。(
+  <a
+    href="https://openid.net/specs/openid-4-verifiable-presentations-1_0.html"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://openid.net/specs/openid-4-verifiable-presentations-1_0.html
+  </a>
+  )
+  <br />
+  &nbsp;
+  <br />
+  Self-Issued OpenID Provider v2（SIOP v2）：
+  <br />
+  SIOP v2は、申請者が自身の秘密鍵で署名したSelf-issued
+  IDトークンで自分自身を認証し、申請先に自己申告のクレームを提示する仕様である。(
+  <a
+    href="https://openid.net/specs/openid-connect-self-issued-v2-1_0.html"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://openid.net/specs/openid-connect-self-issued-v2-1_0.html
+  </a>
+  )
+  <br />
+  &nbsp;
+  <br />
+  SD-JWT-based Verifiable Credentials (SD-JWT VC)：
+  <br />
+  SD-JWT VCは、Selective
+  Disclosure(選択的開示)を実現するデータフォーマットである。JSON Web Token
+  (JWT)でVCを表現する。(
+  <a
+    href="https://www.ietf.org/archive/id/draft-terbu-oauth-sd-jwt-vc-00.html"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://www.ietf.org/archive/id/draft-terbu-oauth-sd-jwt-vc-00.html
+  </a>
+  )
+  <br />
+  &nbsp;
+  <br />
+  Internet Computer Protocol(ICP)：
+  <br />
+  ICPは、DFINITYにより開発が主導されているブロックチェーンであるInternet
+  Computer、及びInternet
+  Computerを運用・管理する仕組みである。データだけでなく実行環境も複数のノードに分散され頑健なシステムを構築する。(
+  <a
+    href="https://internetcomputer.org/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://internetcomputer.org/
+  </a>
+  )
+</p>

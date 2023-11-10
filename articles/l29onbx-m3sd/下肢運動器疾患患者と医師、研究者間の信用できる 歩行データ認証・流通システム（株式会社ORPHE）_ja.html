@@ -1,0 +1,151 @@
+<p style="text-align: justify">
+  <span style="color: #000000">
+    2023年度「Trusted Web
+    の実現に向けたユースケース実証事業」におけるユースケースのうち，株式会社ORPHEによる「下肢運動器疾患患者と医師、研究者間の信用できる歩行データ認証・流通システム」をご紹介します。
+  </span>
+</p>
+<p style="text-align: justify"><br /></p>
+<h2 id="hff45178291"><u>事業内容</u></h2>
+<ul>
+  <li style="text-align: justify">
+    <span style="color: black">
+      スマートフットウェアによる歩行分析【1】を軸に，変形性膝関節症などの下肢運動器疾患患者，医師，研究者間のデータ流通を可能とするアプリケーション・システムの開発・提供
+    </span>
+  </li>
+</ul>
+<p style="text-align: justify">
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/b71dca44aca446329290d56c04502a54/%E4%BA%8B%E6%A5%AD%E5%86%85%E5%AE%B9ORPHE.png"
+    alt=""
+  />
+</p>
+<p style="padding-left: 15em; text-align: justify">
+  <strong style="color: #000000">図: ORPHE FOOTWEAR EASYRUN SHIBUYA 3.0</strong>
+</p>
+<p style="text-align: justify"><br /></p>
+<ul>
+  <li style="text-align: justify">
+    <span style="color: black">
+      患者が自身のデータの主体的な管理権限を有しながら，簡易にデータ共有ができるシステムの提供
+    </span>
+  </li>
+  <li style="text-align: justify">
+    リアルワールドデータを利活用する第三者機関（研究機関/製薬企業など）が，信頼できるデータにアクセスできるシステムの開発
+  </li>
+  <li style="text-align: justify">
+    <span style="color: black">
+      患者が自身のデータを提供することでインセンティブ（ポイントトークンなど）が得られるエコシステムの設計
+    </span>
+  </li>
+</ul>
+<p style="text-align: justify"><br /></p>
+<h2 id="h657288a447"><u>社会的・経済的な価値</u></h2>
+<ul>
+  <li style="text-align: justify">
+    変形性膝関節症は膝関節の軟骨が，加齢や肥満，異常な動作の繰り返しなど様々な原因で変性し，膝関節の変形や痛みを引き起こす疾患であり，本邦における推定患者数は3000万人に上ると言われている【2】．また，変形性関節症治療薬の世界市場規模は2021年で74億ドル，2026年に112億ドル，市場の平均年成長率は8.6%で推移していくと見込まれている【3】．
+  </li>
+  <li style="text-align: justify">
+    変形性膝関節症のアセスメントにおいて歩行分析は重要とされているが，特に日常生活内の歩行を効率的に分析し，簡易かつ安全にデータを共有することは困難であった．
+  </li>
+  <li style="text-align: justify">
+    本実証事業で開発するシステムは，患者が自身で日常内の歩行分析を行い，より適切な行動/習慣を身につけるとともに，医師や研究機関に定量的な歩行データと主観的な痛みなどのデータを共有することで，効果的な診療・指導や研究開発の促進につながると考えられる．
+  </li>
+  <li style="text-align: justify">
+    <span style="color: black">
+      変形性膝関節症以外の下肢運動器疾患や神経疾患など，歩行分析が関わる疾患分野は多く，今後の横展開が進むことで歩行研究の加速，ひいては健康寿命の延伸につながると考えられる．
+    </span>
+  </li>
+</ul>
+<p style="text-align: justify"><br /></p>
+<p style="text-align: justify">
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/469a1e3fde364f96aa94bb124d627c3f/%E7%A4%BE%E4%BC%9A%E7%9A%84%E3%83%BB%E7%B5%8C%E6%B8%88%E7%9A%84%E3%81%AA%E4%BE%A1%E5%80%A4ORPHE.png"
+    alt=""
+  />
+</p>
+<p style="text-align: justify"><br /></p>
+<h2 id="hc556347713"><u>Trusted Webの実現により解決する内容</u></h2>
+<p style="text-align: justify">
+  <span style="color: #000000">
+    前回の実証実験において開発した，Verifiable
+    credentialや分散型ストレージを活用したデータ流通システムに加え，生体認証による本人のデータであることの信頼性向上や，同意撤回に伴うポイント返戻や患者のインセンティブ設計を充実させることでよりスケール可能なエコシステムの確立を目指す．
+  </span>
+</p>
+<p style="text-align: justify">
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/4092c0bcd79a4cc8852300fa13689766/Web%E3%81%AE%E5%AE%9F%E7%8F%BE%E3%81%AB%E3%82%88%E3%82%8A%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B%E5%86%85%E5%AE%B9ORPHE.png"
+    alt=""
+  />
+</p>
+<p style="text-align: justify"><br /></p>
+<h2 id="h44783b365c"><u>実装するシステムアーキテクチャアプリ概要</u></h2>
+<p style="text-align: justify">
+  <span style="color: #000000">
+    ユーザが取得したデータはデジタルウォレット（Woollet【4】;
+    DataGateway社製）に紐づけられData
+    credentialが発行されるとともに，暗号化されてORPHECloudを通じてWoolletTEEに送付されたのち、IPFS（InterPlanetary
+    File
+    System）にデータ保存される．リレーションシップクレデンシャルによってパートナーシップ登録されたPartner（医療機関/研究機関など）は，プレサイスターゲティング技術*を用いて患者情報の秘匿性を保ったまま，条件を満たすデータ/ユーザにのみデータ共有リクエストを送信することが可能となる．
+  </span>
+</p>
+<p style="text-align: justify"><br /></p>
+<p>
+  *プレサイスターゲティング技術：ゼロ知識証明とVerifiable
+  credentialを用いて，データの機密性を保ったまま任意のデータを持つユーザーを，woolletを通じて発見し，ユーザー同意のもとで当該データへのアクセスをする仕組み（特許申請済：特願2022-146935&nbsp;&nbsp;&nbsp;&nbsp;）．本ケースの場合，パートナーが求める一定の条件を満たす対象（例：性別やデータの取得期間など）のみにデータリクエストを送りたい場合にも，患者情報がパートナーには共有されない状態で，データリクエストを送ることができる．データリクエストを受けた患者は，共有をしてもよい項目に対して共有への同意&nbsp;&nbsp;&nbsp;&nbsp;を行った後に，該当データのみがパートナーに共有される．
+  <br />
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/3e73c87a17b847c7ac1e2a2989418f8b/%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3%E3%82%A2%E3%83%97%E3%83%AA%E6%A6%82%E8%A6%81ORPHE.png"
+    alt=""
+  />
+  <br />
+</p>
+<h2 id="h9ed7331aae"><u>ユースケースに関連する資料</u></h2>
+<ul>
+  <li>
+    <span style="color: black">中間報告（</span>
+    <a
+      style="color: black"
+      href="https://www.youtube.com/watch?v=00eiTdZZxVc"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      YouTubeリンク
+    </a>
+    <span style="color: black">）</span>
+  </li>
+</ul>
+<p><br /></p>
+<h3 id="hdf0456f9a2"><u>引用</u></h3>
+<p>
+  【1】
+  <a href="https://orphe.io/" target="_blank" rel="noopener noreferrer">
+    https://orphe.io/
+  </a>
+  <br />
+  【2】
+  <a
+    href="https://www.mhlw.go.jp/shingi/2008/07/dl/s0701-5a.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://www.mhlw.go.jp/shingi/2008/07/dl/s0701-5a.pdf
+  </a>
+  <br />
+  【3】
+  <a
+    href="https://researchstation.jp/report/BCC/3/Osteoarthritis%20Therapeutics_2026_BCC363.html"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://researchstation.jp/report/BCC/3/Osteoarthritis%20Therapeutics_2026_BCC363.html
+  </a>
+  <br />
+  【4】
+  <a
+    href="https://datagateway.network/home/woollet.html"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://datagateway.network/home/woollet.html
+  </a>
+</p>

@@ -1,0 +1,157 @@
+<p style="text-align: justify">
+  2023年度「Trusted Web
+  の実現に向けたユースケース実証事業」におけるユースケースのうち、株式会社PitPaによる「&nbsp;海外人材還流におけるボーダー型個人情報流通システム」をご紹介します。
+</p>
+<h2 id="hff45178291"><u>事業内容</u></h2>
+<ul>
+  <li style="text-align: justify">人材流動性の安定的な加速推進</li>
+  <li style="text-align: justify">
+    育成機関の発行する証明書と受入機関の発行する証明書を関連づけさせることで教育効果の可視化を実現
+  </li>
+  <li style="text-align: justify">
+    受入機関の発行する証明書が帰国後も現地政府・企業にて内容の確かさを検証できる
+  </li>
+  <li style="text-align: justify">人材紹介コストの軽減</li>
+  <li style="text-align: justify">
+    育成機関や受入機関などの海外人材の職歴・スキル等を事前に証明書として発行することで、国境を越えても第三者立証が可能になることで仲介業者の業務コストが軽減される
+  </li>
+</ul>
+<p style="text-align: justify"><br /></p>
+<h2 id="h657288a447"><u>社会的・経済的な価値</u></h2>
+<ul>
+  <li style="text-align: justify">
+    2030年、日本国内において労働供給が644万人不足するとの予測【1】
+  </li>
+  <li style="text-align: justify">
+    特にIT人材は、2030年には最大80万人規模の人材不足【2】
+  </li>
+  <li style="text-align: justify">
+    産業別外国人労働者依存度の推移は10業種で平均依存度2.7％、直近5年で約2倍（下図参照）【3】
+  </li>
+  <li style="text-align: justify">
+    上記ペースで2030年には平均依存度が約14.5%となり、約93万人の海外人材が新たに入国すると想定
+  </li>
+  <li style="text-align: justify">
+    2030年までに市場規模1兆円弱（約93万人の海外人材が新たに入国する想定×海外人材の人材紹介料相場約100万円）の市場ニーズが期待
+  </li>
+  <li style="text-align: justify">
+    なお2021年度の人材ビジネス主要3業界（人材派遣業、人材紹介業、再就職支援業）の市場規模は、事業者売上高で前年度比6.9％増の9兆5,281億円【4】
+  </li>
+</ul>
+<p style="text-align: justify">
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/effccf0a574d4437ab93cfcbe84eee83/%E7%A4%BE%E4%BC%9A%E7%9A%84%E3%83%BB%E7%B5%8C%E6%B8%88%E7%9A%84%E3%81%AA%E4%BE%A1%E5%80%A4PitPa.png"
+    alt=""
+  />
+</p>
+<p style="text-align: justify"><br /></p>
+<h2 id="hc556347713"><u>Trusted Webの実現により解決する内容</u></h2>
+<p style="text-align: justify">
+  信頼性の高い学歴・職歴証明サービスを提供することで、ミスマッチのない採用及びシームレスなキャリア支援環境の構築が可能となり外国人市場の活性化が期待される。
+</p>
+<p>
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/53f86bf928a3435eadf9ec8abd137598/Trusted%20Web%E3%81%AE%E5%AE%9F%E7%8F%BE%E3%81%AB%E3%82%88%E3%82%8A%E8%A7%A3%E6%B1%BA%E3%81%99%E3%82%8B%E5%86%85%E5%AE%B9PitPa.png"
+    alt=""
+  />
+  <br />
+</p>
+<h2 id="h44783b365c"><u>実装するシステムアーキテクチャアプリ概要</u></h2>
+<p>
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/81491fb4937f4a98aa9304626a137b26/%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3%E3%82%A2%E3%83%97%E3%83%AA%E6%A6%82%E8%A6%81PiaPa.png"
+    alt=""
+  />
+</p>
+<p style="text-align: justify">
+  育成機関や受入機関が発行する証明書はVerifiable
+  Credentialのデータ形式で外国人労働者に渡される。
+</p>
+<p style="text-align: justify">
+  外国人労働者を一意に表すIDにはdid:ion【5】を活用する。外国人労働者は必要に応じて保有する証明書を検証に者に選択的に開示することができる。この選択的開示にはVerifiable
+  Presentationのデータ形式を用いる。また発行者のeKYCにはdid:web【6】を活用することで担保する。
+</p>
+<p style="text-align: justify">
+  証明書とクレデンシャル提示者の同一性確認に関しては、パスポートや在留カードの撮影画像とVerifiable
+  Credentialに記載されている名前と生年月日の一致で本人確認を行う。
+</p>
+<p style="text-align: justify"><br /></p>
+<h2 id="h9ed7331aae"><u>ユースケースに関連する資料</u></h2>
+<p>
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/296d597460ca4e45be81e0fd30b2510d/%E3%83%A6%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%82%B9%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E8%B3%87%E6%96%99PiaPa.png"
+    alt=""
+  />
+  <br />
+</p>
+<ul>
+  <li>
+    <span style="color: black">中間報告（</span>
+    <a
+      style="color: black"
+      href="https://www.youtube.com/watch?v=_bMyFFRvGvE"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      YouTubeリンク
+    </a>
+    <span style="color: black">）</span>
+  </li>
+</ul>
+<p><br /></p>
+<h3 id="hdf0456f9a2"><u>引用</u></h3>
+<p>
+  [1]
+  <a
+    href="https://rc.persol-group.co.jp/thinktank/spe/roudou2030/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://rc.persol-group.co.jp/thinktank/spe/roudou2030/
+  </a>
+  <br />
+  [2]
+  <a
+    href="https://www.meti.go.jp/policy/it_policy/jinzai/houkokusyo.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://www.meti.go.jp/policy/it_policy/jinzai/houkokusyo.pdf
+  </a>
+  <br />
+  [3]
+  <a
+    href="https://www.mhlw.go.jp/stf/newpage_09109.html"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://www.mhlw.go.jp/stf/newpage_09109.html
+  </a>
+  <br />
+  [4]
+  <a
+    href="https://roukijp.jp/?p=3655"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://roukijp.jp/?p=3655
+  </a>
+  <br />
+  [5]
+  <a
+    href="https://identity.foundation/ion/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://identity.foundation/ion/
+  </a>
+  <br />
+  [6]
+  <a
+    href="https://w3c-ccg.github.io/did-method-web/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    https://w3c-ccg.github.io/did-method-web/
+  </a>
+</p>
