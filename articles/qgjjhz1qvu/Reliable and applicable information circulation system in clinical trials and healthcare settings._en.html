@@ -1,0 +1,223 @@
+<h2 id="habf2314fa9">Current issues and What Trusted Web Solves</h2>
+<p>&nbsp;</p>
+<h3 id="h43d628e0dc">
+  Current Issues (Pain Points)
+  <br />
+  1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Obtaining Personal Identification and Consent
+  (eConsent)
+</h3>
+<ul>
+  <li>
+    In current online medical consultations and remote participation in clinical
+    trials, eConsent is used to verify the identity of the individual by
+    displaying identification documents such as a driver's license and the
+    person's face on a web screen. However, it is difficult to argue that this
+    method is appropriate.
+  </li>
+  <li>
+    In face-to-face environments, as opposed to remote environments mentioned
+    above, verification of the individual and obtaining consent for various
+    scenarios such as medical treatment, hospitalization, surgery, and
+    participation in clinical trials are done through signatures on paper
+    documents. However, due to the nature of paper media, seamless integration
+    and coordination with other actions are not possible.
+  </li>
+</ul>
+<p>&nbsp;</p>
+<h3 id="h07a2fb8652">
+  2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Utilizing PHR (wearable devices, etc.)
+</h3>
+<ul>
+  <li>
+    In general medical care and clinical trials (DCT), there are difficulties in
+    utilizing data from patients (subjects) on wearable devices, among other
+    reasons. One of the reasons is the lack of a trusted environment and control
+    mechanism, where data can be provided to only those individuals with whom
+    the individual has consented.
+  </li>
+  <li>
+    Regarding the above, implementing individual technologies for each wearable
+    device would increase operational costs and impose burdens on users
+    (patients, subjects, and on-site staff), making it impractical.
+  </li>
+  <li>
+    From the perspective of data integrity, it is necessary to consider
+    security, personal authentication, and other factors starting from the
+    wearable device as the source of data generation. However, there is
+    insufficient technical verification and investigation regarding the
+    practicality of utilizing these aspects in real clinical settings and
+    clinical trials.
+  </li>
+</ul>
+<p>
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/a7aa69e6de3e43ac8123b96c4b03ddab/image.png"
+    alt=""
+  />
+</p>
+<h3 id="h23f01a56db">
+  What Trusted Web Will Solve
+  <br />
+  &nbsp;1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Obtaining Personal Identification and
+  Consent (eConsent)
+</h3>
+<ul>
+  <li>
+    Creating personas, implementing DID, and building a trusted relationship
+    with hospital staff (as well as pharmaceutical company/CRO staff) through
+    smartphone applications.
+  </li>
+  <li>
+    By pairing with hospital staff (as well as pharmaceutical company/CRO
+    staff), the process of identity verification and consent acquisition is
+    considered complete. This is achieved by displaying an eDocument on the
+    medical institution's device, which includes an eSignature linked to
+    personal information through a DID, thereby visualizing the consent
+    acquisition process (= eConsent).
+  </li>
+</ul>
+<p>&nbsp;</p>
+<h3 id="h07a2fb8652">
+  2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Utilizing PHR (wearable devices, etc.)
+</h3>
+<ul>
+  <li>
+    During the pairing process, using DID mapping, multiple wearable devices
+    that are identified as being owned by the same entity are seamlessly paired
+    with the smartphone, which serves as a hub and implements a DID. After
+    pairing, each wearable device can share data within the scope of the consent
+    given in step 1 (data is encrypted and can only be accessed by paired
+    users). Additional coding is done to specify the range of data sharing and
+    provide consent control, in accordance with general medical care or the
+    clinical trial protocol.
+  </li>
+  <li>
+    On the smartphone application from step 1, it is also possible to revoke
+    consent (terminate the pairing), and data sharing is halted after consent
+    revocation.
+  </li>
+  <li>
+    The above steps 1 and 2 are seamlessly implemented, using the initial
+    pairing as the touchpoint.
+  </li>
+</ul>
+<p>
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/4ddc3ef17507463f81cd2c7cb6284b8b/image.png"
+    alt=""
+  />
+  <br />
+</p>
+<h2 id="hbc71db4759">Data to be verified</h2>
+<p>
+  <img
+    src="https://images.microcms-assets.io/assets/3e106d044a664cd6b23d0cc741499b6c/7d5a19f234a04e6191c85c293f801777/image.png"
+    alt=""
+  />
+  <br />
+  &nbsp;
+</p>
+<h2 id="h6e3d52e9f9">Consensus building and trace</h2>
+<ul>
+  <li>
+    By expressing consent for data sharing with third parties, such as
+    physicians, as a touchpoint, a trust relationship (pairing) is established.
+    This is seamlessly achieved through DID mapping implemented on edge devices,
+    allowing data from multiple devices to be shared within the scope of
+    consent. The duration and scope of data sharing are controlled by the data
+    subject, and only stakeholders who have established a trust relationship can
+    perform signature verification on the data.
+  </li>
+</ul>
+<p>&nbsp;</p>
+<h2 id="h46de7a2f76">
+  Business validation (including UX/UI) Development of governance and community
+  activities
+</h2>
+<ul>
+  <li>
+    We conducted research on wearable devices compatible with the prototype
+    system of this project and carried out the definition of wearable device
+    requirements taking into account data integrity considerations.
+  </li>
+  <li>
+    We organized the governance, rules, business feasibility, and the necessity
+    of data standardization for the utilization of wearable devices such as PHRs
+    in daily medical care and clinical trials through interviews with device
+    manufacturers, pharmaceutical companies, medical institutions, and the PHR
+    service industry association.
+  </li>
+  <li>
+    We conducted implementation tests using the prototype system of this project
+    and conducted research on UI/UX.
+  </li>
+</ul>
+<p>&nbsp;</p>
+<h2 id="hb0e31cbb0a">Achievements</h2>
+<p>
+  Based on the definition of wearable device requirements, we conducted market
+  research and created the result as an output called "Wearable Device List".
+  Primarily, wearable devices that fall into the following patterns have been
+  introduced to the market, and this project is capable of accommodating each of
+  them.
+</p>
+<ul>
+  <li>
+    Devices that can implement DID (Decentralized Identifier) on the device
+    itself, taking into consideration data integrity.
+  </li>
+  <li>
+    Devices that can retrieve data from cloud servers or other sources through
+    APIs (encryption possible using the DID of a smartphone, for example).
+  </li>
+</ul>
+<p>
+  &nbsp;
+  <br />
+  Based on the results of the validation tests and stakeholder interviews, the
+  following achievements have been confirmed:
+</p>
+<ul>
+  <li>
+    Based on the clinical trials of DCT (Decentralized Clinical Trial) packages,
+    there is a significant demand for them in the future. They can potentially
+    address existing challenges such as building trust relationships during data
+    provision and operational costs.
+  </li>
+  <li>
+    They provide a user interface and user experience (UI/UX) that is tailored
+    to the clinical trial setting, offering easier usability compared to
+    existing systems and ensuring a certain level of usefulness.
+  </li>
+  <li>
+    They provide a user interface and user experience (UI/UX) that is tailored
+    to the clinical trial setting, offering easier usability compared to
+    existing systems and ensuring a certain level of usefulness.
+  </li>
+  <li>
+    However, there are several challenges that need to be addressed. These
+    include the stakeholders' understanding of the Trusted Web concept, accuracy
+    management and standardization of wearable devices, data format
+    standardization, and the need for guidance and guidelines. It is essential
+    for the industry as a whole to work on understanding the concept of Trusted
+    Web, ensuring data quality and standards, and establishing operational and
+    monitoring systems.
+  </li>
+</ul>
+<p>&nbsp;</p>
+<h2 id="h6d3d72d1e5">Documents</h2>
+<ul>
+  <li>summary（Link）</li>
+  <li>
+    demonstration（
+    <a
+      href="https://youtu.be/bRDdR2Ahvg0?si=YTPv-rQjE5dh9fWm"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      YouTube
+    </a>
+    ）
+  </li>
+</ul>
+<p>&nbsp;</p>
